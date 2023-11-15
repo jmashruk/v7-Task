@@ -1,0 +1,249 @@
+2023-11-15 06:06:16,465 INFO    StreamThr :10802 [internal.py:wandb_internal():86] W&B internal server running at pid: 10802, started at: 2023-11-15 06:06:16.465395
+2023-11-15 06:06:16,467 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status
+2023-11-15 06:06:16,470 INFO    WriterThread:10802 [datastore.py:open_for_write():85] open: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/run-2emh0zrr.wandb
+2023-11-15 06:06:16,470 DEBUG   SenderThread:10802 [sender.py:send():380] send: header
+2023-11-15 06:06:16,471 DEBUG   SenderThread:10802 [sender.py:send():380] send: run
+2023-11-15 06:06:16,479 INFO    SenderThread:10802 [sender.py:_maybe_setup_resume():759] checking resume status for None/YOLOR/2emh0zrr
+2023-11-15 06:06:17,898 INFO    SenderThread:10802 [dir_watcher.py:__init__():211] watching files in: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files
+2023-11-15 06:06:17,898 INFO    SenderThread:10802 [sender.py:_start_run_threads():1124] run started: 2emh0zrr with start time 1699988776.46509
+2023-11-15 06:06:17,904 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: check_version
+2023-11-15 06:06:17,904 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: check_version
+2023-11-15 06:06:18,112 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: run_start
+2023-11-15 06:06:18,121 DEBUG   HandlerThread:10802 [system_info.py:__init__():32] System info init
+2023-11-15 06:06:18,121 DEBUG   HandlerThread:10802 [system_info.py:__init__():47] System info init done
+2023-11-15 06:06:18,121 INFO    HandlerThread:10802 [system_monitor.py:start():194] Starting system monitor
+2023-11-15 06:06:18,121 INFO    SystemMonitor:10802 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-15 06:06:18,122 INFO    HandlerThread:10802 [system_monitor.py:probe():214] Collecting system info
+2023-11-15 06:06:18,123 INFO    SystemMonitor:10802 [interfaces.py:start():190] Started cpu monitoring
+2023-11-15 06:06:18,123 INFO    SystemMonitor:10802 [interfaces.py:start():190] Started disk monitoring
+2023-11-15 06:06:18,124 INFO    SystemMonitor:10802 [interfaces.py:start():190] Started gpu monitoring
+2023-11-15 06:06:18,125 INFO    SystemMonitor:10802 [interfaces.py:start():190] Started memory monitoring
+2023-11-15 06:06:18,125 INFO    SystemMonitor:10802 [interfaces.py:start():190] Started network monitoring
+2023-11-15 06:06:18,132 DEBUG   HandlerThread:10802 [system_info.py:probe():196] Probing system
+2023-11-15 06:06:18,133 DEBUG   HandlerThread:10802 [system_info.py:_probe_git():181] Probing git
+2023-11-15 06:06:18,137 DEBUG   HandlerThread:10802 [system_info.py:_probe_git():189] Probing git done
+2023-11-15 06:06:18,137 DEBUG   HandlerThread:10802 [system_info.py:probe():244] Probing system done
+2023-11-15 06:06:18,137 DEBUG   HandlerThread:10802 [system_monitor.py:probe():223] {'os': 'Linux-6.2.0-36-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2023-11-14T19:06:18.132765', 'startedAt': '2023-11-14T19:06:16.461505', 'docker': None, 'cuda': None, 'args': ('--epochs', '1', '--workers', '4', '--device', '0', '--batch-size', '8', '--data', 'data/custom.yaml', '--img', '640', '640', '--cfg', 'cfg/training/yolov7.yaml', '--weights', 'yolov7.pt', '--name', 'yolov7-custom', '--hyp', 'data/hyp.scratch.custom.yaml'), 'state': 'running', 'program': '/home/mash/v7_new/yolov7/train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/WongKinYiu/yolov7.git', 'commit': 'a207844b1ce82d204ab36d87d496728d3d2348e7'}, 'email': 'mashruk.jahangir@trurecognition.io', 'root': '/home/mash/v7_new/yolov7', 'host': 'tru-mash', 'username': 'mash', 'executable': '/home/mash/yolov7/yolov7/venv/bin/python', 'cpu_count': 14, 'cpu_count_logical': 20, 'cpu_freq': {'current': 1883.2606, 'min': 400.0, 'max': 4180.0}, 'cpu_freq_per_core': [{'current': 607.878, 'min': 400.0, 'max': 4600.0}, {'current': 2569.171, 'min': 400.0, 'max': 4600.0}, {'current': 2350.666, 'min': 400.0, 'max': 4700.0}, {'current': 2700.0, 'min': 400.0, 'max': 4700.0}, {'current': 2135.329, 'min': 400.0, 'max': 4700.0}, {'current': 2700.0, 'min': 400.0, 'max': 4700.0}, {'current': 2442.182, 'min': 400.0, 'max': 4600.0}, {'current': 2598.862, 'min': 400.0, 'max': 4600.0}, {'current': 2355.294, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 2535.516, 'min': 400.0, 'max': 4600.0}, {'current': 2434.895, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 982.363, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 503.731, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}], 'disk': {'/': {'total': 937.3305015563965, 'used': 604.8640403747559}}, 'gpu': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'memory_total': 6442450944}], 'memory': {'total': 31.027263641357422}}
+2023-11-15 06:06:18,137 INFO    HandlerThread:10802 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-15 06:06:18,137 INFO    HandlerThread:10802 [system_monitor.py:probe():227] Publishing system info
+2023-11-15 06:06:18,137 DEBUG   HandlerThread:10802 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-15 06:06:18,137 DEBUG   HandlerThread:10802 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-15 06:06:18,138 INFO    HandlerThread:10802 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-15 06:06:18,140 DEBUG   SenderThread:10802 [sender.py:send():380] send: files
+2023-11-15 06:06:18,140 INFO    SenderThread:10802 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2023-11-15 06:06:18,143 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 06:06:18,143 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 06:06:18,184 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 06:06:18,605 DEBUG   SenderThread:10802 [sender.py:send():380] send: telemetry
+2023-11-15 06:06:18,605 DEBUG   SenderThread:10802 [sender.py:send():380] send: telemetry
+2023-11-15 06:06:18,605 DEBUG   SenderThread:10802 [sender.py:send():380] send: config
+2023-11-15 06:06:18,605 DEBUG   SenderThread:10802 [sender.py:send():380] send: config
+2023-11-15 06:06:18,899 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:18,899 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/wandb-metadata.json
+2023-11-15 06:06:18,899 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/requirements.txt
+2023-11-15 06:06:19,322 INFO    wandb-upload_0:10802 [upload_job.py:push():131] Uploaded file /tmp/tmp_6_xy69wwandb/cd8csb3e-wandb-metadata.json
+2023-11-15 06:06:20,898 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:22,230 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:06:26,900 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:27,467 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:06:28,901 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:30,901 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:32,552 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:06:32,902 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:33,143 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 06:06:33,144 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 06:06:33,144 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 06:06:34,902 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:36,903 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:37,817 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:06:38,904 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:40,904 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:42,905 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:43,139 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:06:44,905 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:46,906 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:48,143 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 06:06:48,144 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 06:06:48,144 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 06:06:48,610 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:06:48,906 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:49,906 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/config.yaml
+2023-11-15 06:06:50,907 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:52,907 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:54,053 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:06:54,908 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:56,909 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:58,909 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:06:59,332 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:07:00,910 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:02,910 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:03,144 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 06:07:03,144 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 06:07:03,144 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 06:07:04,611 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:07:04,911 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:06,912 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:08,912 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:09,858 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:07:10,913 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:12,913 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:14,892 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:07:14,914 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:16,916 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:18,125 DEBUG   SystemMonitor:10802 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-15 06:07:18,130 DEBUG   SenderThread:10802 [sender.py:send():380] send: stats
+2023-11-15 06:07:18,146 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 06:07:18,158 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 06:07:18,160 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 06:07:18,918 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:20,612 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:07:22,922 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:25,823 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:07:26,924 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:28,925 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:30,925 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:31,213 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:07:32,927 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:33,144 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 06:07:33,144 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 06:07:33,144 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 06:07:34,928 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:36,601 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:07:36,743 DEBUG   SenderThread:10802 [sender.py:send():380] send: exit
+2023-11-15 06:07:36,743 INFO    SenderThread:10802 [sender.py:send_exit():585] handling exit code: 1
+2023-11-15 06:07:36,743 INFO    SenderThread:10802 [sender.py:send_exit():587] handling runtime: 78
+2023-11-15 06:07:36,744 INFO    SenderThread:10802 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 06:07:36,744 INFO    SenderThread:10802 [sender.py:send_exit():593] send defer
+2023-11-15 06:07:36,745 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:36,745 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 0
+2023-11-15 06:07:36,745 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:36,745 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-11-15 06:07:36,745 INFO    SenderThread:10802 [sender.py:transition_state():613] send defer: 1
+2023-11-15 06:07:36,745 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:36,745 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 1
+2023-11-15 06:07:36,745 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:36,745 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-11-15 06:07:36,745 INFO    SenderThread:10802 [sender.py:transition_state():613] send defer: 2
+2023-11-15 06:07:36,745 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:36,746 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 2
+2023-11-15 06:07:36,746 INFO    HandlerThread:10802 [system_monitor.py:finish():203] Stopping system monitor
+2023-11-15 06:07:36,746 DEBUG   SystemMonitor:10802 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-11-15 06:07:36,746 DEBUG   SystemMonitor:10802 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-11-15 06:07:36,746 INFO    HandlerThread:10802 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-15 06:07:36,747 INFO    HandlerThread:10802 [interfaces.py:finish():202] Joined disk monitor
+2023-11-15 06:07:36,770 INFO    HandlerThread:10802 [interfaces.py:finish():202] Joined gpu monitor
+2023-11-15 06:07:36,770 INFO    HandlerThread:10802 [interfaces.py:finish():202] Joined memory monitor
+2023-11-15 06:07:36,770 INFO    HandlerThread:10802 [interfaces.py:finish():202] Joined network monitor
+2023-11-15 06:07:36,771 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:36,771 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-11-15 06:07:36,771 INFO    SenderThread:10802 [sender.py:transition_state():613] send defer: 3
+2023-11-15 06:07:36,771 DEBUG   SenderThread:10802 [sender.py:send():380] send: stats
+2023-11-15 06:07:36,771 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:36,771 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 3
+2023-11-15 06:07:36,771 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:36,772 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-11-15 06:07:36,772 INFO    SenderThread:10802 [sender.py:transition_state():613] send defer: 4
+2023-11-15 06:07:36,772 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:36,772 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 4
+2023-11-15 06:07:36,772 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:36,772 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-11-15 06:07:36,772 INFO    SenderThread:10802 [sender.py:transition_state():613] send defer: 5
+2023-11-15 06:07:36,772 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:36,772 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 5
+2023-11-15 06:07:36,772 DEBUG   SenderThread:10802 [sender.py:send():380] send: summary
+2023-11-15 06:07:36,773 INFO    SenderThread:10802 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 06:07:36,773 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:36,773 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-11-15 06:07:36,773 INFO    SenderThread:10802 [sender.py:transition_state():613] send defer: 6
+2023-11-15 06:07:36,773 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:36,773 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 6
+2023-11-15 06:07:36,773 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:36,773 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-11-15 06:07:36,773 INFO    SenderThread:10802 [sender.py:transition_state():613] send defer: 7
+2023-11-15 06:07:36,774 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:07:36,774 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:36,774 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 7
+2023-11-15 06:07:36,774 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:36,774 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-11-15 06:07:36,930 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:36,931 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/wandb-summary.json
+2023-11-15 06:07:37,744 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 06:07:38,929 INFO    SenderThread:10802 [sender.py:transition_state():613] send defer: 8
+2023-11-15 06:07:38,930 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 06:07:38,931 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:38,931 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 8
+2023-11-15 06:07:38,933 INFO    Thread-12 :10802 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:38,933 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:38,934 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-11-15 06:07:38,934 INFO    SenderThread:10802 [job_builder.py:build():298] Attempting to build job artifact
+2023-11-15 06:07:38,936 INFO    SenderThread:10802 [job_builder.py:_get_source_type():428] is repo sourced job
+2023-11-15 06:07:38,947 INFO    SenderThread:10802 [job_builder.py:build():404] adding wandb-job metadata file
+2023-11-15 06:07:38,952 INFO    SenderThread:10802 [sender.py:transition_state():613] send defer: 9
+2023-11-15 06:07:38,953 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:38,953 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 9
+2023-11-15 06:07:38,953 DEBUG   SenderThread:10802 [sender.py:send():380] send: artifact
+2023-11-15 06:07:40,292 INFO    SenderThread:10802 [sender.py:send_artifact():1458] sent artifact job-https___github.com_WongKinYiu_yolov7.git_train.py - {'id': 'QXJ0aWZhY3Q6NjM4MjEwODQ3', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjExNTcxNDg3OA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NjM4MjE5Mzkx', 'versionIndex': 2}}}
+2023-11-15 06:07:40,292 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:40,292 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-11-15 06:07:40,293 INFO    SenderThread:10802 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-15 06:07:40,936 INFO    SenderThread:10802 [dir_watcher.py:finish():388] scan: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files
+2023-11-15 06:07:40,937 INFO    SenderThread:10802 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/wandb-metadata.json wandb-metadata.json
+2023-11-15 06:07:40,937 INFO    SenderThread:10802 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/requirements.txt requirements.txt
+2023-11-15 06:07:40,938 INFO    SenderThread:10802 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log output.log
+2023-11-15 06:07:40,938 INFO    SenderThread:10802 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/config.yaml config.yaml
+2023-11-15 06:07:40,938 INFO    SenderThread:10802 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/wandb-summary.json wandb-summary.json
+2023-11-15 06:07:40,938 INFO    SenderThread:10802 [sender.py:transition_state():613] send defer: 10
+2023-11-15 06:07:40,939 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:40,939 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 10
+2023-11-15 06:07:40,940 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:40,941 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-11-15 06:07:40,941 INFO    SenderThread:10802 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-15 06:07:41,661 INFO    wandb-upload_2:10802 [upload_job.py:push():131] Uploaded file /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/output.log
+2023-11-15 06:07:41,859 INFO    wandb-upload_1:10802 [upload_job.py:push():131] Uploaded file /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/requirements.txt
+2023-11-15 06:07:41,942 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 06:07:42,159 INFO    wandb-upload_0:10802 [upload_job.py:push():131] Uploaded file /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/config.yaml
+2023-11-15 06:07:42,160 INFO    wandb-upload_3:10802 [upload_job.py:push():131] Uploaded file /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/files/wandb-summary.json
+2023-11-15 06:07:42,361 INFO    Thread-11 (_thread_body):10802 [sender.py:transition_state():613] send defer: 11
+2023-11-15 06:07:42,361 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:42,362 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 11
+2023-11-15 06:07:42,362 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:42,363 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-11-15 06:07:42,363 INFO    SenderThread:10802 [file_pusher.py:join():181] waiting for file pusher
+2023-11-15 06:07:42,363 INFO    SenderThread:10802 [sender.py:transition_state():613] send defer: 12
+2023-11-15 06:07:42,363 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:42,363 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 12
+2023-11-15 06:07:42,364 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:42,364 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-11-15 06:07:42,364 INFO    SenderThread:10802 [file_stream.py:finish():595] file stream finish called
+2023-11-15 06:07:42,747 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 06:07:43,327 INFO    SenderThread:10802 [file_stream.py:finish():599] file stream finish is done
+2023-11-15 06:07:43,327 INFO    SenderThread:10802 [sender.py:transition_state():613] send defer: 13
+2023-11-15 06:07:43,328 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:43,328 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 13
+2023-11-15 06:07:43,329 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:43,329 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-11-15 06:07:43,330 INFO    SenderThread:10802 [sender.py:transition_state():613] send defer: 14
+2023-11-15 06:07:43,331 DEBUG   SenderThread:10802 [sender.py:send():380] send: final
+2023-11-15 06:07:43,331 DEBUG   SenderThread:10802 [sender.py:send():380] send: footer
+2023-11-15 06:07:43,331 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 06:07:43,332 INFO    HandlerThread:10802 [handler.py:handle_request_defer():172] handle defer: 14
+2023-11-15 06:07:43,332 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: defer
+2023-11-15 06:07:43,332 INFO    SenderThread:10802 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-11-15 06:07:43,333 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 06:07:43,334 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: server_info
+2023-11-15 06:07:43,335 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: get_summary
+2023-11-15 06:07:43,335 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: sampled_history
+2023-11-15 06:07:43,335 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 06:07:43,335 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: server_info
+2023-11-15 06:07:43,339 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 06:07:43,340 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: job_info
+2023-11-15 06:07:43,585 DEBUG   SenderThread:10802 [sender.py:send_request():407] send_request: job_info
+2023-11-15 06:07:43,586 INFO    MainThread:10802 [wandb_run.py:_footer_history_summary_info():3760] rendering history
+2023-11-15 06:07:43,586 INFO    MainThread:10802 [wandb_run.py:_footer_history_summary_info():3792] rendering summary
+2023-11-15 06:07:43,586 INFO    MainThread:10802 [wandb_run.py:_footer_sync_info():3719] logging synced files
+2023-11-15 06:07:43,586 DEBUG   HandlerThread:10802 [handler.py:handle_request():146] handle_request: shutdown
+2023-11-15 06:07:43,586 INFO    HandlerThread:10802 [handler.py:finish():866] shutting down handler
+2023-11-15 06:07:44,341 INFO    WriterThread:10802 [datastore.py:close():294] close: /home/mash/v7_new/yolov7/wandb/run-20231115_060616-2emh0zrr/run-2emh0zrr.wandb
+2023-11-15 06:07:44,586 INFO    SenderThread:10802 [sender.py:finish():1536] shutting down sender
+2023-11-15 06:07:44,586 INFO    SenderThread:10802 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-15 06:07:44,586 INFO    SenderThread:10802 [file_pusher.py:join():181] waiting for file pusher

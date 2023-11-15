@@ -1,0 +1,756 @@
+2023-11-15 07:51:24,789 INFO    StreamThr :11421 [internal.py:wandb_internal():86] W&B internal server running at pid: 11421, started at: 2023-11-15 07:51:24.789333
+2023-11-15 07:51:24,790 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status
+2023-11-15 07:51:24,791 INFO    WriterThread:11421 [datastore.py:open_for_write():85] open: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/run-2lm9ttr2.wandb
+2023-11-15 07:51:24,791 DEBUG   SenderThread:11421 [sender.py:send():380] send: header
+2023-11-15 07:51:24,792 DEBUG   SenderThread:11421 [sender.py:send():380] send: run
+2023-11-15 07:51:24,796 INFO    SenderThread:11421 [sender.py:_maybe_setup_resume():759] checking resume status for None/YOLOR/2lm9ttr2
+2023-11-15 07:51:26,125 INFO    SenderThread:11421 [dir_watcher.py:__init__():211] watching files in: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files
+2023-11-15 07:51:26,125 INFO    SenderThread:11421 [sender.py:_start_run_threads():1124] run started: 2lm9ttr2 with start time 1699995084.788911
+2023-11-15 07:51:26,133 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: check_version
+2023-11-15 07:51:26,133 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: check_version
+2023-11-15 07:51:26,345 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: run_start
+2023-11-15 07:51:26,353 DEBUG   HandlerThread:11421 [system_info.py:__init__():32] System info init
+2023-11-15 07:51:26,353 DEBUG   HandlerThread:11421 [system_info.py:__init__():47] System info init done
+2023-11-15 07:51:26,353 INFO    HandlerThread:11421 [system_monitor.py:start():194] Starting system monitor
+2023-11-15 07:51:26,353 INFO    SystemMonitor:11421 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-15 07:51:26,354 INFO    HandlerThread:11421 [system_monitor.py:probe():214] Collecting system info
+2023-11-15 07:51:26,354 INFO    SystemMonitor:11421 [interfaces.py:start():190] Started cpu monitoring
+2023-11-15 07:51:26,354 INFO    SystemMonitor:11421 [interfaces.py:start():190] Started disk monitoring
+2023-11-15 07:51:26,355 INFO    SystemMonitor:11421 [interfaces.py:start():190] Started gpu monitoring
+2023-11-15 07:51:26,356 INFO    SystemMonitor:11421 [interfaces.py:start():190] Started memory monitoring
+2023-11-15 07:51:26,356 INFO    SystemMonitor:11421 [interfaces.py:start():190] Started network monitoring
+2023-11-15 07:51:26,363 DEBUG   HandlerThread:11421 [system_info.py:probe():196] Probing system
+2023-11-15 07:51:26,364 DEBUG   HandlerThread:11421 [system_info.py:_probe_git():181] Probing git
+2023-11-15 07:51:26,367 DEBUG   HandlerThread:11421 [system_info.py:_probe_git():189] Probing git done
+2023-11-15 07:51:26,367 DEBUG   HandlerThread:11421 [system_info.py:probe():244] Probing system done
+2023-11-15 07:51:26,367 DEBUG   HandlerThread:11421 [system_monitor.py:probe():223] {'os': 'Linux-6.2.0-36-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2023-11-14T20:51:26.363488', 'startedAt': '2023-11-14T20:51:24.786844', 'docker': None, 'cuda': None, 'args': ('--epochs', '1', '--workers', '2', '--device', '0', '--batch-size', '8', '--data', 'data/custom.yaml', '--img', '640', '640', '--cfg', 'cfg/training/yolov7.yaml', '--weights', 'yolov7.pt', '--name', 'yolov7-custom', '--hyp', 'data/hyp.scratch.custom.yaml'), 'state': 'running', 'program': '/home/mash/v7_new/yolov7/train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/WongKinYiu/yolov7.git', 'commit': 'a207844b1ce82d204ab36d87d496728d3d2348e7'}, 'email': 'mashruk.jahangir@trurecognition.io', 'root': '/home/mash/v7_new/yolov7', 'host': 'tru-mash', 'username': 'mash', 'executable': '/home/mash/yolov7/yolov7/venv/bin/python', 'cpu_count': 14, 'cpu_count_logical': 20, 'cpu_freq': {'current': 2182.1251, 'min': 400.0, 'max': 4180.0}, 'cpu_freq_per_core': [{'current': 2679.894, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 2503.927, 'min': 400.0, 'max': 4700.0}, {'current': 2700.0, 'min': 400.0, 'max': 4700.0}, {'current': 2700.0, 'min': 400.0, 'max': 4700.0}, {'current': 2349.007, 'min': 400.0, 'max': 4700.0}, {'current': 2497.432, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 482.211, 'min': 400.0, 'max': 4600.0}, {'current': 2357.288, 'min': 400.0, 'max': 4600.0}, {'current': 2528.914, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 1124.098, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 850.381, 'min': 400.0, 'max': 3500.0}, {'current': 642.152, 'min': 400.0, 'max': 3500.0}], 'disk': {'/': {'total': 937.3305015563965, 'used': 606.3061103820801}}, 'gpu': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'memory_total': 6442450944}], 'memory': {'total': 31.027259826660156}}
+2023-11-15 07:51:26,367 INFO    HandlerThread:11421 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-15 07:51:26,367 INFO    HandlerThread:11421 [system_monitor.py:probe():227] Publishing system info
+2023-11-15 07:51:26,367 DEBUG   HandlerThread:11421 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-15 07:51:26,368 DEBUG   HandlerThread:11421 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-15 07:51:26,368 INFO    HandlerThread:11421 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-15 07:51:26,370 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:51:26,371 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2023-11-15 07:51:26,373 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:51:26,373 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:51:26,419 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:51:27,010 DEBUG   SenderThread:11421 [sender.py:send():380] send: telemetry
+2023-11-15 07:51:27,010 DEBUG   SenderThread:11421 [sender.py:send():380] send: telemetry
+2023-11-15 07:51:27,010 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:51:27,010 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:51:27,126 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/wandb-metadata.json
+2023-11-15 07:51:27,126 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/requirements.txt
+2023-11-15 07:51:27,126 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:27,858 INFO    wandb-upload_0:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/8t40w29x-wandb-metadata.json
+2023-11-15 07:51:29,125 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:30,338 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:51:35,127 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:35,393 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:51:37,127 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:39,128 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:40,469 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:51:41,129 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:41,373 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:51:41,374 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:51:41,374 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:51:43,129 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:45,129 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:45,736 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:51:47,130 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:49,130 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:51,010 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:51:51,131 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:53,131 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:55,132 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:56,155 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:51:56,373 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:51:56,374 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:51:56,534 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:51:57,132 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/config.yaml
+2023-11-15 07:51:57,132 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:51:59,133 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:01,133 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:01,579 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:52:03,134 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:05,134 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:06,633 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:52:07,135 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:09,135 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:11,136 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:11,374 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:52:11,374 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:52:11,375 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:52:11,888 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:52:13,136 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:15,137 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:16,984 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:52:17,137 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:19,138 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:21,139 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:22,323 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:52:23,139 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:25,140 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:26,356 DEBUG   SystemMonitor:11421 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-15 07:52:26,357 DEBUG   SenderThread:11421 [sender.py:send():380] send: stats
+2023-11-15 07:52:26,374 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:52:26,374 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:52:26,374 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:52:27,140 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:27,653 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:52:29,140 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:31,142 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:32,981 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:52:34,142 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:36,143 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:38,144 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:38,308 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:52:40,144 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:41,374 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:52:41,374 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:52:41,374 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:52:42,145 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:43,651 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:52:44,145 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:46,146 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:48,146 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:48,975 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:52:50,147 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:52,147 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:54,147 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:54,317 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:52:56,148 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:52:56,357 DEBUG   SenderThread:11421 [sender.py:send():380] send: stats
+2023-11-15 07:52:56,374 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:52:56,375 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:52:56,376 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:52:58,148 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:01,375 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:53:06,376 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:53:09,031 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:53:11,374 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:53:11,375 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:53:11,375 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:53:12,151 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:14,135 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:53:14,151 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:16,152 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:18,152 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:19,246 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:53:20,153 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:22,154 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:24,154 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:24,313 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:53:26,155 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:26,358 DEBUG   SenderThread:11421 [sender.py:send():380] send: stats
+2023-11-15 07:53:26,374 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:53:26,375 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:53:26,375 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:53:28,155 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:29,629 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:53:30,156 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:32,156 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:34,156 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:34,962 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:53:36,157 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:38,157 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:39,962 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:53:40,158 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:41,375 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:53:41,375 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:53:41,377 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:53:42,158 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:44,159 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:44,970 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:53:46,159 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:48,160 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:49,985 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:53:50,161 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:52,161 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:54,162 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:55,004 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:53:56,162 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:53:56,358 DEBUG   SenderThread:11421 [sender.py:send():380] send: stats
+2023-11-15 07:53:56,375 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:53:56,375 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:53:56,375 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:53:58,163 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:00,163 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:00,171 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:54:02,164 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:04,165 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:05,204 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:54:06,165 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:08,166 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:10,166 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:10,404 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:54:11,375 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:54:11,375 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:54:11,376 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:54:12,167 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:14,167 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:15,717 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:54:18,169 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:20,169 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:20,780 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:54:22,170 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:24,170 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:26,171 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:26,359 DEBUG   SenderThread:11421 [sender.py:send():380] send: stats
+2023-11-15 07:54:26,360 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:54:26,375 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:54:26,376 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:54:26,377 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:54:30,172 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:31,484 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:54:32,172 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:34,173 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:36,173 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:37,389 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:54:40,175 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:41,495 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:54:41,495 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:54:41,495 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:54:42,175 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:42,911 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:54:44,176 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:46,176 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:48,680 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:54:50,178 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:52,178 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:53,996 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:54:54,179 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:56,179 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:56,360 DEBUG   SenderThread:11421 [sender.py:send():380] send: stats
+2023-11-15 07:54:56,573 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:54:56,573 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:54:56,574 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:54:58,180 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:54:59,968 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:55:00,181 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:55:02,091 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,091 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Mosaics_0_554b4635cc8137b3de14.jpg with policy now
+2023-11-15 07:55:02,094 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,094 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Mosaics_0_a4433d3518408659438a.jpg with policy now
+2023-11-15 07:55:02,094 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,094 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Mosaics_0_3a03b5fe2fdb639287c4.jpg with policy now
+2023-11-15 07:55:02,098 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,098 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Mosaics_0_d9ff46197c9ef0a3d72f.jpg with policy now
+2023-11-15 07:55:02,098 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,098 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Mosaics_0_b9244ec25bbb238ebd7d.jpg with policy now
+2023-11-15 07:55:02,099 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,099 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Mosaics_0_7c8b90ebd90ddbd879f0.jpg with policy now
+2023-11-15 07:55:02,101 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,102 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Mosaics_0_f241bd25b67171d9e5df.jpg with policy now
+2023-11-15 07:55:02,103 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,103 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Mosaics_0_05f690c5f4ab55356a03.jpg with policy now
+2023-11-15 07:55:02,105 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,105 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Mosaics_0_68b0dc3c9ed0bd350add.jpg with policy now
+2023-11-15 07:55:02,106 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,106 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Mosaics_0_82687bf1656c73d53303.jpg with policy now
+2023-11-15 07:55:02,174 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,174 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Validation_0_a1c4691748c2a507f389.jpg with policy now
+2023-11-15 07:55:02,177 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,177 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Validation_0_9a13967b02b4a16de493.jpg with policy now
+2023-11-15 07:55:02,179 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,179 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Validation_0_00a44ea556d851153e4f.jpg with policy now
+2023-11-15 07:55:02,181 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,182 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Validation_0_e67ed53331789c9ef9d9.jpg with policy now
+2023-11-15 07:55:02,182 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:55:02,182 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_68b0dc3c9ed0bd350add.jpg
+2023-11-15 07:55:02,183 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_05f690c5f4ab55356a03.jpg
+2023-11-15 07:55:02,183 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_f241bd25b67171d9e5df.jpg
+2023-11-15 07:55:02,183 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_7c8b90ebd90ddbd879f0.jpg
+2023-11-15 07:55:02,183 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_a4433d3518408659438a.jpg
+2023-11-15 07:55:02,183 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_d9ff46197c9ef0a3d72f.jpg
+2023-11-15 07:55:02,184 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_3a03b5fe2fdb639287c4.jpg
+2023-11-15 07:55:02,185 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,185 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Validation_0_f23c96f072cc6219ae9d.jpg with policy now
+2023-11-15 07:55:02,185 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Validation_0_00a44ea556d851153e4f.jpg
+2023-11-15 07:55:02,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_82687bf1656c73d53303.jpg
+2023-11-15 07:55:02,186 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,186 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Validation_0_a0372873a0e34cbfb29e.jpg with policy now
+2023-11-15 07:55:02,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_b9244ec25bbb238ebd7d.jpg
+2023-11-15 07:55:02,187 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_554b4635cc8137b3de14.jpg
+2023-11-15 07:55:02,187 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Validation_0_9a13967b02b4a16de493.jpg
+2023-11-15 07:55:02,187 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Validation_0_a1c4691748c2a507f389.jpg
+2023-11-15 07:55:02,187 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Validation_0_e67ed53331789c9ef9d9.jpg
+2023-11-15 07:55:02,187 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media
+2023-11-15 07:55:02,187 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images
+2023-11-15 07:55:02,216 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,216 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_ef58eab15c552f1295f5.png with policy now
+2023-11-15 07:55:02,217 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,217 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_1b5565493c5bd92f76aa.boxes2D.json with policy now
+2023-11-15 07:55:02,217 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,219 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,220 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_1282f7104b254e38c0cf.png with policy now
+2023-11-15 07:55:02,220 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,220 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_13c30ff3903f19b4523d.boxes2D.json with policy now
+2023-11-15 07:55:02,220 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,223 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,223 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_f88d545acebc675fbb20.png with policy now
+2023-11-15 07:55:02,223 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,223 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_b6d330e0b2de9d7f85e7.boxes2D.json with policy now
+2023-11-15 07:55:02,224 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,226 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,226 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_809d23ef1ee1c697c5fa.png with policy now
+2023-11-15 07:55:02,227 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,228 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_074c32d3ba7989324bec.boxes2D.json with policy now
+2023-11-15 07:55:02,228 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,229 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,229 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_d9869c0f233bfb898e24.png with policy now
+2023-11-15 07:55:02,229 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,230 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_66340df2940cdc01bb0d.boxes2D.json with policy now
+2023-11-15 07:55:02,234 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,234 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,234 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_20ad44764c69fffb8631.png with policy now
+2023-11-15 07:55:02,234 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,234 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_ffdb228ca1ca2392f477.boxes2D.json with policy now
+2023-11-15 07:55:02,234 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,235 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,235 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_a6658a4832bd29fd1bce.png with policy now
+2023-11-15 07:55:02,235 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,235 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_f83e7dc82cc0b8bd9798.boxes2D.json with policy now
+2023-11-15 07:55:02,236 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,237 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,238 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_55f4f96e814874570043.png with policy now
+2023-11-15 07:55:02,238 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,238 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_6c104431fc6706910e0e.boxes2D.json with policy now
+2023-11-15 07:55:02,238 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,241 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,241 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_62e60626d99db02d76a8.png with policy now
+2023-11-15 07:55:02,241 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,241 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_05e3708302e3b4e3ccba.boxes2D.json with policy now
+2023-11-15 07:55:02,241 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,244 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,244 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_087150680d8c8d316802.png with policy now
+2023-11-15 07:55:02,244 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,244 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_08eeaa8a105dbab21730.boxes2D.json with policy now
+2023-11-15 07:55:02,245 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,246 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,246 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_3d4d7bf52ac358616d7f.png with policy now
+2023-11-15 07:55:02,247 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,247 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_f3fb1404bd8f06e52c31.boxes2D.json with policy now
+2023-11-15 07:55:02,247 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,249 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,249 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_265f0af964a292a8666c.png with policy now
+2023-11-15 07:55:02,249 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,250 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_da9c2f4a55bbcd847aa7.boxes2D.json with policy now
+2023-11-15 07:55:02,250 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,252 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,252 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_f5ba990fd4539d1c718c.png with policy now
+2023-11-15 07:55:02,252 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,252 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_a6c58a23c4f525f18041.boxes2D.json with policy now
+2023-11-15 07:55:02,253 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,254 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,255 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_a64ea17c1868bcd40a42.png with policy now
+2023-11-15 07:55:02,255 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,255 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_4b0e5816f452b510de80.boxes2D.json with policy now
+2023-11-15 07:55:02,255 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,258 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,259 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_9d98d82ab9e6e63044d4.png with policy now
+2023-11-15 07:55:02,259 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,259 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_510c781a79e0fa3b2c6e.boxes2D.json with policy now
+2023-11-15 07:55:02,260 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,261 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,262 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Bounding Box Debugger/Images_0_a0cd0e4d9b3208b0fe2a.png with policy now
+2023-11-15 07:55:02,262 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:55:02,262 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/metadata/boxes2D/Bounding Box Debugger/Images_0_6f8be17c5cd55333a2af.boxes2D.json with policy now
+2023-11-15 07:55:02,264 DEBUG   SenderThread:11421 [sender.py:send():380] send: config
+2023-11-15 07:55:02,385 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 07:55:02,388 DEBUG   SenderThread:11421 [sender.py:send():380] send: history
+2023-11-15 07:55:02,388 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 07:55:02,388 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 07:55:03,183 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_a6c58a23c4f525f18041.boxes2D.json
+2023-11-15 07:55:03,183 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_a6658a4832bd29fd1bce.png
+2023-11-15 07:55:03,184 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_f5ba990fd4539d1c718c.png
+2023-11-15 07:55:03,184 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/wandb-summary.json
+2023-11-15 07:55:03,184 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_f88d545acebc675fbb20.png
+2023-11-15 07:55:03,184 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_55f4f96e814874570043.png
+2023-11-15 07:55:03,184 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_510c781a79e0fa3b2c6e.boxes2D.json
+2023-11-15 07:55:03,185 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_62e60626d99db02d76a8.png
+2023-11-15 07:55:03,185 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_a0cd0e4d9b3208b0fe2a.png
+2023-11-15 07:55:03,185 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_3d4d7bf52ac358616d7f.png
+2023-11-15 07:55:03,185 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_4b0e5816f452b510de80.boxes2D.json
+2023-11-15 07:55:03,185 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_d9869c0f233bfb898e24.png
+2023-11-15 07:55:03,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_1282f7104b254e38c0cf.png
+2023-11-15 07:55:03,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_265f0af964a292a8666c.png
+2023-11-15 07:55:03,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_809d23ef1ee1c697c5fa.png
+2023-11-15 07:55:03,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_f3fb1404bd8f06e52c31.boxes2D.json
+2023-11-15 07:55:03,187 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Validation_0_a0372873a0e34cbfb29e.jpg
+2023-11-15 07:55:03,187 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_6c104431fc6706910e0e.boxes2D.json
+2023-11-15 07:55:03,187 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_9d98d82ab9e6e63044d4.png
+2023-11-15 07:55:03,187 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_05e3708302e3b4e3ccba.boxes2D.json
+2023-11-15 07:55:03,187 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_074c32d3ba7989324bec.boxes2D.json
+2023-11-15 07:55:03,188 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_a64ea17c1868bcd40a42.png
+2023-11-15 07:55:03,188 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_ffdb228ca1ca2392f477.boxes2D.json
+2023-11-15 07:55:03,188 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_f83e7dc82cc0b8bd9798.boxes2D.json
+2023-11-15 07:55:03,188 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Validation_0_f23c96f072cc6219ae9d.jpg
+2023-11-15 07:55:03,188 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_13c30ff3903f19b4523d.boxes2D.json
+2023-11-15 07:55:03,188 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_b6d330e0b2de9d7f85e7.boxes2D.json
+2023-11-15 07:55:03,189 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_da9c2f4a55bbcd847aa7.boxes2D.json
+2023-11-15 07:55:03,189 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_20ad44764c69fffb8631.png
+2023-11-15 07:55:03,189 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_087150680d8c8d316802.png
+2023-11-15 07:55:03,189 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_6f8be17c5cd55333a2af.boxes2D.json
+2023-11-15 07:55:03,189 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_ef58eab15c552f1295f5.png
+2023-11-15 07:55:03,189 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_66340df2940cdc01bb0d.boxes2D.json
+2023-11-15 07:55:03,189 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_08eeaa8a105dbab21730.boxes2D.json
+2023-11-15 07:55:03,190 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_1b5565493c5bd92f76aa.boxes2D.json
+2023-11-15 07:55:03,190 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images
+2023-11-15 07:55:03,190 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media
+2023-11-15 07:55:03,190 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata
+2023-11-15 07:55:03,190 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D
+2023-11-15 07:55:03,190 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger
+2023-11-15 07:55:03,190 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger
+2023-11-15 07:55:03,518 INFO    wandb-upload_1:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/0rtk7ltr-media/images/Mosaics_0_a4433d3518408659438a.jpg
+2023-11-15 07:55:04,184 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:55:05,151 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:55:06,333 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: log_artifact
+2023-11-15 07:55:06,333 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: log_artifact
+2023-11-15 07:55:06,466 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 07:55:07,181 INFO    wandb-upload_4:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/uo4yron4-media/images/Mosaics_0_b9244ec25bbb238ebd7d.jpg
+2023-11-15 07:55:07,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Results_1_9fdf644e09ffa4b8a513.png
+2023-11-15 07:55:07,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Results_1_46eb95fadf0fc80c7d56.png
+2023-11-15 07:55:07,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Results_1_24401261bc9137409d44.png
+2023-11-15 07:55:07,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Results_1_67eff5e342793485627a.png
+2023-11-15 07:55:07,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Results_1_f3bd6445fba84e139d1d.png
+2023-11-15 07:55:07,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Results_1_51971e8b9bf6af86bc98.png
+2023-11-15 07:55:07,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images
+2023-11-15 07:55:07,467 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 07:55:07,961 INFO    wandb-upload_0:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/2oh815vv-media/images/Mosaics_0_554b4635cc8137b3de14.jpg
+2023-11-15 07:55:08,186 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:55:08,409 INFO    wandb-upload_48:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/f6uazs30-media/images/Results_1_24401261bc9137409d44.png
+2023-11-15 07:55:09,551 INFO    wandb-upload_6:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/1mg4ynku-media/images/Mosaics_0_f241bd25b67171d9e5df.jpg
+2023-11-15 07:55:09,640 INFO    wandb-upload_9:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/cnvl0v1m-media/images/Mosaics_0_82687bf1656c73d53303.jpg
+2023-11-15 07:55:09,735 INFO    wandb-upload_2:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/vcog1fyi-media/images/Mosaics_0_3a03b5fe2fdb639287c4.jpg
+2023-11-15 07:55:09,960 INFO    wandb-upload_7:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/ihomf8zd-media/images/Mosaics_0_05f690c5f4ab55356a03.jpg
+2023-11-15 07:55:10,195 INFO    wandb-upload_3:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/6modwysg-media/images/Mosaics_0_d9ff46197c9ef0a3d72f.jpg
+2023-11-15 07:55:10,309 INFO    wandb-upload_8:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/36sd5zap-media/images/Mosaics_0_68b0dc3c9ed0bd350add.jpg
+2023-11-15 07:55:10,345 INFO    wandb-upload_5:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/i7r54nlm-media/images/Mosaics_0_7c8b90ebd90ddbd879f0.jpg
+2023-11-15 07:55:11,022 INFO    wandb-upload_0:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/cgqll842-media/images/Mosaics_0_a4433d3518408659438a.jpg
+2023-11-15 07:55:11,193 INFO    wandb-upload_6:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/dgl70sam-media/images/Mosaics_0_3a03b5fe2fdb639287c4.jpg
+2023-11-15 07:55:11,337 INFO    wandb-upload_10:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/ljysucu7-media/images/Validation_0_a1c4691748c2a507f389.jpg
+2023-11-15 07:55:11,356 INFO    wandb-upload_13:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/o04snlfk-media/images/Validation_0_e67ed53331789c9ef9d9.jpg
+2023-11-15 07:55:11,467 INFO    wandb-upload_9:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/sprwfh61-media/images/Mosaics_0_82687bf1656c73d53303.jpg
+2023-11-15 07:55:11,853 INFO    wandb-upload_3:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/tjfghqgk-media/images/Mosaics_0_554b4635cc8137b3de14.jpg
+2023-11-15 07:55:11,914 INFO    wandb-upload_18:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/yd29xhxd-media/images/Bounding Box Debugger/Images_0_1282f7104b254e38c0cf.png
+2023-11-15 07:55:12,192 INFO    wandb-upload_25:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/y7x3m9t4-media/metadata/boxes2D/Bounding Box Debugger/Images_0_66340df2940cdc01bb0d.boxes2D.json
+2023-11-15 07:55:12,360 INFO    wandb-upload_17:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/tfmlr5ro-media/metadata/boxes2D/Bounding Box Debugger/Images_0_1b5565493c5bd92f76aa.boxes2D.json
+2023-11-15 07:55:12,469 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:55:12,578 INFO    wandb-upload_21:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/6c4tr1mr-media/metadata/boxes2D/Bounding Box Debugger/Images_0_b6d330e0b2de9d7f85e7.boxes2D.json
+2023-11-15 07:55:12,636 INFO    wandb-upload_39:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/9nnkb8xq-media/metadata/boxes2D/Bounding Box Debugger/Images_0_da9c2f4a55bbcd847aa7.boxes2D.json
+2023-11-15 07:55:12,641 INFO    wandb-upload_29:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/toa5479a-media/metadata/boxes2D/Bounding Box Debugger/Images_0_f83e7dc82cc0b8bd9798.boxes2D.json
+2023-11-15 07:55:12,663 INFO    wandb-upload_19:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/idugbxkt-media/metadata/boxes2D/Bounding Box Debugger/Images_0_13c30ff3903f19b4523d.boxes2D.json
+2023-11-15 07:55:12,734 INFO    wandb-upload_27:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/pwqm2cq1-media/metadata/boxes2D/Bounding Box Debugger/Images_0_ffdb228ca1ca2392f477.boxes2D.json
+2023-11-15 07:55:12,779 INFO    wandb-upload_31:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/1ql7q3as-media/metadata/boxes2D/Bounding Box Debugger/Images_0_6c104431fc6706910e0e.boxes2D.json
+2023-11-15 07:55:12,782 INFO    wandb-upload_23:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/ppp8u3u3-media/metadata/boxes2D/Bounding Box Debugger/Images_0_074c32d3ba7989324bec.boxes2D.json
+2023-11-15 07:55:12,825 INFO    wandb-upload_41:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/t637lke3-media/metadata/boxes2D/Bounding Box Debugger/Images_0_a6c58a23c4f525f18041.boxes2D.json
+2023-11-15 07:55:12,865 INFO    wandb-upload_47:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/sqjni9db-media/metadata/boxes2D/Bounding Box Debugger/Images_0_6f8be17c5cd55333a2af.boxes2D.json
+2023-11-15 07:55:12,869 INFO    wandb-upload_43:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/i2238x1i-media/metadata/boxes2D/Bounding Box Debugger/Images_0_4b0e5816f452b510de80.boxes2D.json
+2023-11-15 07:55:12,874 INFO    wandb-upload_35:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/bcki1v0k-media/metadata/boxes2D/Bounding Box Debugger/Images_0_08eeaa8a105dbab21730.boxes2D.json
+2023-11-15 07:55:12,876 INFO    wandb-upload_45:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/fdnspxb5-media/metadata/boxes2D/Bounding Box Debugger/Images_0_510c781a79e0fa3b2c6e.boxes2D.json
+2023-11-15 07:55:12,956 INFO    wandb-upload_33:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/px7opdgj-media/metadata/boxes2D/Bounding Box Debugger/Images_0_05e3708302e3b4e3ccba.boxes2D.json
+2023-11-15 07:55:12,984 INFO    wandb-upload_11:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/59e1h1ox-media/images/Validation_0_9a13967b02b4a16de493.jpg
+2023-11-15 07:55:13,057 INFO    wandb-upload_37:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/hnqxvxyl-media/metadata/boxes2D/Bounding Box Debugger/Images_0_f3fb1404bd8f06e52c31.boxes2D.json
+2023-11-15 07:55:13,179 INFO    wandb-upload_48:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/cyoe1g5q-media/images/Mosaics_0_b9244ec25bbb238ebd7d.jpg
+2023-11-15 07:55:13,209 INFO    wandb-upload_16:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/k7j9nqog-media/images/Bounding Box Debugger/Images_0_ef58eab15c552f1295f5.png
+2023-11-15 07:55:13,495 INFO    wandb-upload_12:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/ucgnym3d-media/images/Validation_0_00a44ea556d851153e4f.jpg
+2023-11-15 07:55:13,638 INFO    wandb-upload_15:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/1ybrzwvw-media/images/Validation_0_a0372873a0e34cbfb29e.jpg
+2023-11-15 07:55:13,674 INFO    wandb-upload_51:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/zgwvx4pr-media/images/Results_1_51971e8b9bf6af86bc98.png
+2023-11-15 07:55:13,815 INFO    wandb-upload_4:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/6f3rj8xv-media/images/Results_1_46eb95fadf0fc80c7d56.png
+2023-11-15 07:55:14,182 INFO    wandb-upload_50:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/sjmfxd0b-media/images/Results_1_f3bd6445fba84e139d1d.png
+2023-11-15 07:55:14,217 INFO    wandb-upload_1:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/uowxj0g0-media/images/Results_1_9fdf644e09ffa4b8a513.png
+2023-11-15 07:55:14,485 INFO    wandb-upload_22:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/r7k6rbom-media/images/Bounding Box Debugger/Images_0_809d23ef1ee1c697c5fa.png
+2023-11-15 07:55:14,673 INFO    wandb-upload_38:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/y73mvapo-media/images/Bounding Box Debugger/Images_0_265f0af964a292a8666c.png
+2023-11-15 07:55:14,690 INFO    wandb-upload_5:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/lo93epyn-media/metadata/boxes2D/Bounding Box Debugger/Images_0_6c104431fc6706910e0e.boxes2D.json
+2023-11-15 07:55:14,751 INFO    wandb-upload_9:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/hk3b3qhj-media/metadata/boxes2D/Bounding Box Debugger/Images_0_ffdb228ca1ca2392f477.boxes2D.json
+2023-11-15 07:55:14,761 INFO    wandb-upload_10:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/y66vx6pw-media/metadata/boxes2D/Bounding Box Debugger/Images_0_074c32d3ba7989324bec.boxes2D.json
+2023-11-15 07:55:14,885 INFO    wandb-upload_0:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/m9vpvvw8-media/metadata/boxes2D/Bounding Box Debugger/Images_0_05e3708302e3b4e3ccba.boxes2D.json
+2023-11-15 07:55:14,904 INFO    wandb-upload_24:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/v838xjzu-media/images/Bounding Box Debugger/Images_0_d9869c0f233bfb898e24.png
+2023-11-15 07:55:14,951 INFO    wandb-upload_18:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/4sobo10p-media/metadata/boxes2D/Bounding Box Debugger/Images_0_f83e7dc82cc0b8bd9798.boxes2D.json
+2023-11-15 07:55:15,077 INFO    wandb-upload_28:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/mxcpj77p-media/images/Bounding Box Debugger/Images_0_a6658a4832bd29fd1bce.png
+2023-11-15 07:55:15,097 INFO    wandb-upload_20:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/7g2mt8mr-media/images/Bounding Box Debugger/Images_0_f88d545acebc675fbb20.png
+2023-11-15 07:55:15,117 INFO    wandb-upload_39:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/1fw0r0fs-media/metadata/boxes2D/Bounding Box Debugger/Images_0_b6d330e0b2de9d7f85e7.boxes2D.json
+2023-11-15 07:55:15,163 INFO    wandb-upload_30:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/svav1mus-media/images/Bounding Box Debugger/Images_0_55f4f96e814874570043.png
+2023-11-15 07:55:15,203 INFO    wandb-upload_8:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/rkgexelj-media/images/Bounding Box Debugger/Images_0_1282f7104b254e38c0cf.png
+2023-11-15 07:55:15,325 INFO    wandb-upload_14:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/tfu5tbm6-media/images/Validation_0_f23c96f072cc6219ae9d.jpg
+2023-11-15 07:55:15,335 INFO    wandb-upload_17:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/16exrl3w-media/metadata/boxes2D/Bounding Box Debugger/Images_0_13c30ff3903f19b4523d.boxes2D.json
+2023-11-15 07:55:15,410 INFO    wandb-upload_34:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/wv1jczcz-media/images/Bounding Box Debugger/Images_0_087150680d8c8d316802.png
+2023-11-15 07:55:15,607 INFO    wandb-upload_19:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/fe8mp0hh-media/metadata/boxes2D/Bounding Box Debugger/Images_0_da9c2f4a55bbcd847aa7.boxes2D.json
+2023-11-15 07:55:15,716 INFO    wandb-upload_44:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/w39a4vpp-media/images/Bounding Box Debugger/Images_0_9d98d82ab9e6e63044d4.png
+2023-11-15 07:55:15,719 INFO    wandb-upload_31:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/ubtqoh8u-media/metadata/boxes2D/Bounding Box Debugger/Images_0_6f8be17c5cd55333a2af.boxes2D.json
+2023-11-15 07:55:15,903 INFO    wandb-upload_46:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/eteipyjn-media/images/Bounding Box Debugger/Images_0_a0cd0e4d9b3208b0fe2a.png
+2023-11-15 07:55:15,997 INFO    wandb-upload_47:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/neua682c-media/metadata/boxes2D/Bounding Box Debugger/Images_0_66340df2940cdc01bb0d.boxes2D.json
+2023-11-15 07:55:16,021 INFO    wandb-upload_49:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/ybua1sjy-media/images/Results_1_67eff5e342793485627a.png
+2023-11-15 07:55:16,089 INFO    wandb-upload_26:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/e2klzl4j-media/images/Bounding Box Debugger/Images_0_20ad44764c69fffb8631.png
+2023-11-15 07:55:16,107 INFO    wandb-upload_2:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/4hgturja-media/metadata/boxes2D/Bounding Box Debugger/Images_0_1b5565493c5bd92f76aa.boxes2D.json
+2023-11-15 07:55:16,124 INFO    wandb-upload_35:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/txnq81d4-media/metadata/boxes2D/Bounding Box Debugger/Images_0_08eeaa8a105dbab21730.boxes2D.json
+2023-11-15 07:55:16,128 INFO    wandb-upload_36:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/m2egum2s-media/images/Bounding Box Debugger/Images_0_3d4d7bf52ac358616d7f.png
+2023-11-15 07:55:16,247 INFO    wandb-upload_40:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/kn3p1mxa-media/images/Bounding Box Debugger/Images_0_f5ba990fd4539d1c718c.png
+2023-11-15 07:55:16,882 INFO    wandb-upload_23:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/ys2j3j6z-media/metadata/boxes2D/Bounding Box Debugger/Images_0_a6c58a23c4f525f18041.boxes2D.json
+2023-11-15 07:55:16,947 INFO    wandb-upload_7:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/b9enp85y-media/images/Bounding Box Debugger/Images_0_ef58eab15c552f1295f5.png
+2023-11-15 07:55:17,066 INFO    wandb-upload_1:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/sax9vtu1-media/images/Validation_0_e67ed53331789c9ef9d9.jpg
+2023-11-15 07:55:17,119 INFO    wandb-upload_29:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/dlz8wsak-media/images/Validation_0_9a13967b02b4a16de493.jpg
+2023-11-15 07:55:17,178 INFO    wandb-upload_6:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/3fzivs0p-media/images/Mosaics_0_68b0dc3c9ed0bd350add.jpg
+2023-11-15 07:55:17,343 INFO    wandb-upload_32:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/2ag8h6qv-media/images/Bounding Box Debugger/Images_0_62e60626d99db02d76a8.png
+2023-11-15 07:55:17,357 INFO    wandb-upload_42:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/3mpz5b1z-media/images/Bounding Box Debugger/Images_0_a64ea17c1868bcd40a42.png
+2023-11-15 07:55:17,410 INFO    wandb-upload_10:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/hadjg074-media/metadata/boxes2D/Bounding Box Debugger/Images_0_510c781a79e0fa3b2c6e.boxes2D.json
+2023-11-15 07:55:17,453 INFO    wandb-upload_27:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/21rdjoac-media/images/Validation_0_a1c4691748c2a507f389.jpg
+2023-11-15 07:55:17,471 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:55:17,629 INFO    wandb-upload_13:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/sme9a10m-media/images/Mosaics_0_05f690c5f4ab55356a03.jpg
+2023-11-15 07:55:17,885 INFO    wandb-upload_21:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/xlexemfb-media/images/Validation_0_00a44ea556d851153e4f.jpg
+2023-11-15 07:55:17,917 INFO    wandb-upload_12:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/khll7yht-media/images/Mosaics_0_d9ff46197c9ef0a3d72f.jpg
+2023-11-15 07:55:17,992 INFO    wandb-upload_16:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/snxg41hm-media/images/Mosaics_0_7c8b90ebd90ddbd879f0.jpg
+2023-11-15 07:55:18,051 INFO    wandb-upload_24:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/wgm5h8jm-media/metadata/boxes2D/Bounding Box Debugger/Images_0_4b0e5816f452b510de80.boxes2D.json
+2023-11-15 07:55:18,067 INFO    wandb-upload_3:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/schs5g9i-media/images/Bounding Box Debugger/Images_0_265f0af964a292a8666c.png
+2023-11-15 07:55:18,163 INFO    wandb-upload_15:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/4x6xzxsb-media/metadata/boxes2D/Bounding Box Debugger/Images_0_f3fb1404bd8f06e52c31.boxes2D.json
+2023-11-15 07:55:18,269 INFO    wandb-upload_43:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/d1k41rxa-media/images/Bounding Box Debugger/Images_0_f88d545acebc675fbb20.png
+2023-11-15 07:55:18,312 INFO    wandb-upload_41:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/j4fz849l-media/images/Bounding Box Debugger/Images_0_a6658a4832bd29fd1bce.png
+2023-11-15 07:55:18,690 INFO    wandb-upload_25:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/vy03y4g5-media/images/Bounding Box Debugger/Images_0_809d23ef1ee1c697c5fa.png
+2023-11-15 07:55:18,694 INFO    wandb-upload_48:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/fxfk6euw-media/images/Mosaics_0_f241bd25b67171d9e5df.jpg
+2023-11-15 07:55:18,829 INFO    wandb-upload_9:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/dea0xyvb-media/images/Bounding Box Debugger/Images_0_55f4f96e814874570043.png
+2023-11-15 07:55:19,535 INFO    wandb-upload_18:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/gbssyqoy-media/images/Bounding Box Debugger/Images_0_d9869c0f233bfb898e24.png
+2023-11-15 07:55:19,789 INFO    wandb-upload_51:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/rsnx61jl-media/images/Validation_0_a0372873a0e34cbfb29e.jpg
+2023-11-15 07:55:19,939 INFO    wandb-upload_44:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/pfxsv24b-media/images/Bounding Box Debugger/Images_0_62e60626d99db02d76a8.png
+2023-11-15 07:55:20,359 INFO    wandb-upload_4:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/li619ozf-media/images/Bounding Box Debugger/Images_0_9d98d82ab9e6e63044d4.png
+2023-11-15 07:55:20,364 INFO    wandb-upload_50:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/763poc32-media/images/Validation_0_f23c96f072cc6219ae9d.jpg
+2023-11-15 07:55:20,420 INFO    wandb-upload_5:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/60eu1muy-media/images/Bounding Box Debugger/Images_0_f5ba990fd4539d1c718c.png
+2023-11-15 07:55:20,626 INFO    wandb-upload_0:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/1a1fu6n4-media/images/Bounding Box Debugger/Images_0_a0cd0e4d9b3208b0fe2a.png
+2023-11-15 07:55:20,673 INFO    wandb-upload_22:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/20h53max-media/images/Bounding Box Debugger/Images_0_20ad44764c69fffb8631.png
+2023-11-15 07:55:20,866 INFO    wandb-upload_38:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/keksnfk3-media/images/Bounding Box Debugger/Images_0_087150680d8c8d316802.png
+2023-11-15 07:55:21,006 INFO    wandb-upload_45:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/w7xq37y2-media/images/Bounding Box Debugger/Images_0_3d4d7bf52ac358616d7f.png
+2023-11-15 07:55:21,030 INFO    wandb-upload_33:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/1ydmmj9u-media/images/Bounding Box Debugger/Images_0_a64ea17c1868bcd40a42.png
+2023-11-15 07:55:22,473 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:55:27,476 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:55:32,477 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:55:37,479 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:55:42,482 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:55:47,484 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:55:52,485 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:55:57,488 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:56:02,490 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:56:02,650 INFO    wandb-upload_52:11421 [upload_job.py:push():89] Uploaded file /home/mash/.local/share/wandb/artifacts/staging/tmp5j0xaoaz
+2023-11-15 07:56:04,556 INFO    SenderThread:11421 [sender.py:send_request_log_artifact():1446] logged artifact run_2lm9ttr2_model - {'id': 'QXJ0aWZhY3Q6NjM4Mzg0NjM2', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjExNTc4MzQ4OQ==', 'latestArtifact': None}}
+2023-11-15 07:56:04,559 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:56:05,185 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:56:05,185 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Results_1_9fdf644e09ffa4b8a513.png with policy now
+2023-11-15 07:56:05,185 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:56:05,185 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Results_1_67eff5e342793485627a.png with policy now
+2023-11-15 07:56:05,186 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:56:05,186 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Results_1_24401261bc9137409d44.png with policy now
+2023-11-15 07:56:05,186 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:56:05,186 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Results_1_f3bd6445fba84e139d1d.png with policy now
+2023-11-15 07:56:05,186 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:56:05,186 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Results_1_46eb95fadf0fc80c7d56.png with policy now
+2023-11-15 07:56:05,186 DEBUG   SenderThread:11421 [sender.py:send():380] send: files
+2023-11-15 07:56:05,186 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file media/images/Results_1_51971e8b9bf6af86bc98.png with policy now
+2023-11-15 07:56:05,186 DEBUG   SenderThread:11421 [sender.py:send():380] send: history
+2023-11-15 07:56:05,187 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 07:56:05,189 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 07:56:05,190 DEBUG   SenderThread:11421 [sender.py:send():380] send: telemetry
+2023-11-15 07:56:05,190 DEBUG   SenderThread:11421 [sender.py:send():380] send: exit
+2023-11-15 07:56:05,190 INFO    SenderThread:11421 [sender.py:send_exit():585] handling exit code: 0
+2023-11-15 07:56:05,190 INFO    SenderThread:11421 [sender.py:send_exit():587] handling runtime: 220
+2023-11-15 07:56:05,192 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 07:56:05,193 INFO    SenderThread:11421 [sender.py:send_exit():593] send defer
+2023-11-15 07:56:05,193 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 07:56:05,193 DEBUG   SenderThread:11421 [sender.py:send():380] send: stats
+2023-11-15 07:56:05,193 DEBUG   SenderThread:11421 [sender.py:send():380] send: stats
+2023-11-15 07:56:05,193 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:05,195 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 0
+2023-11-15 07:56:05,196 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:05,196 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-11-15 07:56:05,196 INFO    SenderThread:11421 [sender.py:transition_state():613] send defer: 1
+2023-11-15 07:56:05,197 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:05,197 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 1
+2023-11-15 07:56:05,197 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:05,197 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-11-15 07:56:05,197 INFO    SenderThread:11421 [sender.py:transition_state():613] send defer: 2
+2023-11-15 07:56:05,197 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:05,197 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 2
+2023-11-15 07:56:05,197 INFO    HandlerThread:11421 [system_monitor.py:finish():203] Stopping system monitor
+2023-11-15 07:56:05,197 DEBUG   SystemMonitor:11421 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-11-15 07:56:05,197 DEBUG   SystemMonitor:11421 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-11-15 07:56:05,198 INFO    HandlerThread:11421 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-15 07:56:05,198 INFO    HandlerThread:11421 [interfaces.py:finish():202] Joined disk monitor
+2023-11-15 07:56:05,223 INFO    HandlerThread:11421 [interfaces.py:finish():202] Joined gpu monitor
+2023-11-15 07:56:05,223 INFO    HandlerThread:11421 [interfaces.py:finish():202] Joined memory monitor
+2023-11-15 07:56:05,223 INFO    HandlerThread:11421 [interfaces.py:finish():202] Joined network monitor
+2023-11-15 07:56:05,224 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:05,224 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-11-15 07:56:05,224 INFO    SenderThread:11421 [sender.py:transition_state():613] send defer: 3
+2023-11-15 07:56:05,224 DEBUG   SenderThread:11421 [sender.py:send():380] send: stats
+2023-11-15 07:56:05,224 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:05,224 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 3
+2023-11-15 07:56:05,224 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:05,225 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-11-15 07:56:05,225 INFO    SenderThread:11421 [sender.py:transition_state():613] send defer: 4
+2023-11-15 07:56:05,225 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:05,225 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 4
+2023-11-15 07:56:05,225 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:05,225 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-11-15 07:56:05,225 INFO    SenderThread:11421 [sender.py:transition_state():613] send defer: 5
+2023-11-15 07:56:05,225 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:05,225 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 5
+2023-11-15 07:56:05,226 DEBUG   SenderThread:11421 [sender.py:send():380] send: summary
+2023-11-15 07:56:05,226 INFO    SenderThread:11421 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 07:56:05,226 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:05,226 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-11-15 07:56:05,226 INFO    SenderThread:11421 [sender.py:transition_state():613] send defer: 6
+2023-11-15 07:56:05,226 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:05,226 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 6
+2023-11-15 07:56:05,227 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:05,227 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-11-15 07:56:05,229 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:56:05,294 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/config.yaml
+2023-11-15 07:56:05,295 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/wandb-summary.json
+2023-11-15 07:56:05,496 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 07:56:05,572 INFO    SenderThread:11421 [sender.py:transition_state():613] send defer: 7
+2023-11-15 07:56:05,572 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 07:56:05,572 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:05,572 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 7
+2023-11-15 07:56:05,573 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:05,573 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-11-15 07:56:06,296 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/config.yaml
+2023-11-15 07:56:06,454 INFO    wandb-upload_37:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/nkp8j02x-media/images/Results_1_24401261bc9137409d44.png
+2023-11-15 07:56:06,484 INFO    wandb-upload_49:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/p70g03aq-media/images/Results_1_9fdf644e09ffa4b8a513.png
+2023-11-15 07:56:06,491 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 07:56:06,508 INFO    wandb-upload_23:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/etalkxf1-media/images/Results_1_51971e8b9bf6af86bc98.png
+2023-11-15 07:56:06,515 INFO    wandb-upload_40:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/5tpyq99o-media/images/Results_1_46eb95fadf0fc80c7d56.png
+2023-11-15 07:56:06,586 INFO    wandb-upload_36:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/uw9yevfe-media/images/Results_1_f3bd6445fba84e139d1d.png
+2023-11-15 07:56:07,212 INFO    wandb-upload_26:11421 [upload_job.py:push():131] Uploaded file /tmp/tmpkhiuehh2wandb/3ckagbht-media/images/Results_1_67eff5e342793485627a.png
+2023-11-15 07:56:08,298 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:56:09,354 INFO    SenderThread:11421 [sender.py:transition_state():613] send defer: 8
+2023-11-15 07:56:09,355 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 07:56:09,356 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:09,356 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 8
+2023-11-15 07:56:09,357 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:09,357 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-11-15 07:56:09,358 INFO    SenderThread:11421 [job_builder.py:build():298] Attempting to build job artifact
+2023-11-15 07:56:09,361 INFO    SenderThread:11421 [job_builder.py:_get_source_type():428] is repo sourced job
+2023-11-15 07:56:09,363 INFO    SenderThread:11421 [job_builder.py:build():404] adding wandb-job metadata file
+2023-11-15 07:56:09,369 INFO    SenderThread:11421 [sender.py:transition_state():613] send defer: 9
+2023-11-15 07:56:09,369 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:09,369 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 9
+2023-11-15 07:56:09,370 DEBUG   SenderThread:11421 [sender.py:send():380] send: artifact
+2023-11-15 07:56:09,494 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 07:56:10,304 INFO    Thread-12 :11421 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:56:10,900 INFO    SenderThread:11421 [sender.py:send_artifact():1458] sent artifact job-https___github.com_WongKinYiu_yolov7.git_train.py - {'id': 'QXJ0aWZhY3Q6NjM4MjE5Mzkx', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjExNTcxNDg3OA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NjM4MjE5Mzkx', 'versionIndex': 2}}}
+2023-11-15 07:56:10,900 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:10,900 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-11-15 07:56:10,901 INFO    SenderThread:11421 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-15 07:56:10,901 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:56:11,308 INFO    SenderThread:11421 [dir_watcher.py:finish():388] scan: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files
+2023-11-15 07:56:11,309 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/wandb-metadata.json wandb-metadata.json
+2023-11-15 07:56:11,309 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/requirements.txt requirements.txt
+2023-11-15 07:56:11,309 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log output.log
+2023-11-15 07:56:11,310 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/config.yaml config.yaml
+2023-11-15 07:56:11,310 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/wandb-summary.json wandb-summary.json
+2023-11-15 07:56:11,318 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_510c781a79e0fa3b2c6e.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_510c781a79e0fa3b2c6e.boxes2D.json
+2023-11-15 07:56:11,318 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_b6d330e0b2de9d7f85e7.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_b6d330e0b2de9d7f85e7.boxes2D.json
+2023-11-15 07:56:11,318 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_6f8be17c5cd55333a2af.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_6f8be17c5cd55333a2af.boxes2D.json
+2023-11-15 07:56:11,319 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_f3fb1404bd8f06e52c31.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_f3fb1404bd8f06e52c31.boxes2D.json
+2023-11-15 07:56:11,319 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_f83e7dc82cc0b8bd9798.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_f83e7dc82cc0b8bd9798.boxes2D.json
+2023-11-15 07:56:11,319 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_074c32d3ba7989324bec.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_074c32d3ba7989324bec.boxes2D.json
+2023-11-15 07:56:11,319 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_66340df2940cdc01bb0d.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_66340df2940cdc01bb0d.boxes2D.json
+2023-11-15 07:56:11,319 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_a6c58a23c4f525f18041.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_a6c58a23c4f525f18041.boxes2D.json
+2023-11-15 07:56:11,319 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_6c104431fc6706910e0e.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_6c104431fc6706910e0e.boxes2D.json
+2023-11-15 07:56:11,322 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_05e3708302e3b4e3ccba.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_05e3708302e3b4e3ccba.boxes2D.json
+2023-11-15 07:56:11,322 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_da9c2f4a55bbcd847aa7.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_da9c2f4a55bbcd847aa7.boxes2D.json
+2023-11-15 07:56:11,322 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_08eeaa8a105dbab21730.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_08eeaa8a105dbab21730.boxes2D.json
+2023-11-15 07:56:11,322 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_13c30ff3903f19b4523d.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_13c30ff3903f19b4523d.boxes2D.json
+2023-11-15 07:56:11,323 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_1b5565493c5bd92f76aa.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_1b5565493c5bd92f76aa.boxes2D.json
+2023-11-15 07:56:11,323 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_ffdb228ca1ca2392f477.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_ffdb228ca1ca2392f477.boxes2D.json
+2023-11-15 07:56:11,323 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/metadata/boxes2D/Bounding Box Debugger/Images_0_4b0e5816f452b510de80.boxes2D.json media/metadata/boxes2D/Bounding Box Debugger/Images_0_4b0e5816f452b510de80.boxes2D.json
+2023-11-15 07:56:11,326 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Results_1_46eb95fadf0fc80c7d56.png media/images/Results_1_46eb95fadf0fc80c7d56.png
+2023-11-15 07:56:11,326 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_7c8b90ebd90ddbd879f0.jpg media/images/Mosaics_0_7c8b90ebd90ddbd879f0.jpg
+2023-11-15 07:56:11,326 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Validation_0_9a13967b02b4a16de493.jpg media/images/Validation_0_9a13967b02b4a16de493.jpg
+2023-11-15 07:56:11,326 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Validation_0_a1c4691748c2a507f389.jpg media/images/Validation_0_a1c4691748c2a507f389.jpg
+2023-11-15 07:56:11,326 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Results_1_67eff5e342793485627a.png media/images/Results_1_67eff5e342793485627a.png
+2023-11-15 07:56:11,326 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_3a03b5fe2fdb639287c4.jpg media/images/Mosaics_0_3a03b5fe2fdb639287c4.jpg
+2023-11-15 07:56:11,326 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Results_1_51971e8b9bf6af86bc98.png media/images/Results_1_51971e8b9bf6af86bc98.png
+2023-11-15 07:56:11,326 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_f241bd25b67171d9e5df.jpg media/images/Mosaics_0_f241bd25b67171d9e5df.jpg
+2023-11-15 07:56:11,327 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_68b0dc3c9ed0bd350add.jpg media/images/Mosaics_0_68b0dc3c9ed0bd350add.jpg
+2023-11-15 07:56:11,327 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Validation_0_a0372873a0e34cbfb29e.jpg media/images/Validation_0_a0372873a0e34cbfb29e.jpg
+2023-11-15 07:56:11,327 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_a4433d3518408659438a.jpg media/images/Mosaics_0_a4433d3518408659438a.jpg
+2023-11-15 07:56:11,327 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Validation_0_e67ed53331789c9ef9d9.jpg media/images/Validation_0_e67ed53331789c9ef9d9.jpg
+2023-11-15 07:56:11,327 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Results_1_f3bd6445fba84e139d1d.png media/images/Results_1_f3bd6445fba84e139d1d.png
+2023-11-15 07:56:11,327 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Validation_0_f23c96f072cc6219ae9d.jpg media/images/Validation_0_f23c96f072cc6219ae9d.jpg
+2023-11-15 07:56:11,327 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Results_1_9fdf644e09ffa4b8a513.png media/images/Results_1_9fdf644e09ffa4b8a513.png
+2023-11-15 07:56:11,327 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_554b4635cc8137b3de14.jpg media/images/Mosaics_0_554b4635cc8137b3de14.jpg
+2023-11-15 07:56:11,327 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_82687bf1656c73d53303.jpg media/images/Mosaics_0_82687bf1656c73d53303.jpg
+2023-11-15 07:56:11,328 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_05f690c5f4ab55356a03.jpg media/images/Mosaics_0_05f690c5f4ab55356a03.jpg
+2023-11-15 07:56:11,328 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_d9ff46197c9ef0a3d72f.jpg media/images/Mosaics_0_d9ff46197c9ef0a3d72f.jpg
+2023-11-15 07:56:11,328 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Mosaics_0_b9244ec25bbb238ebd7d.jpg media/images/Mosaics_0_b9244ec25bbb238ebd7d.jpg
+2023-11-15 07:56:11,328 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Validation_0_00a44ea556d851153e4f.jpg media/images/Validation_0_00a44ea556d851153e4f.jpg
+2023-11-15 07:56:11,328 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Results_1_24401261bc9137409d44.png media/images/Results_1_24401261bc9137409d44.png
+2023-11-15 07:56:11,328 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_62e60626d99db02d76a8.png media/images/Bounding Box Debugger/Images_0_62e60626d99db02d76a8.png
+2023-11-15 07:56:11,328 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_a6658a4832bd29fd1bce.png media/images/Bounding Box Debugger/Images_0_a6658a4832bd29fd1bce.png
+2023-11-15 07:56:11,328 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_087150680d8c8d316802.png media/images/Bounding Box Debugger/Images_0_087150680d8c8d316802.png
+2023-11-15 07:56:11,329 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_3d4d7bf52ac358616d7f.png media/images/Bounding Box Debugger/Images_0_3d4d7bf52ac358616d7f.png
+2023-11-15 07:56:11,329 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_ef58eab15c552f1295f5.png media/images/Bounding Box Debugger/Images_0_ef58eab15c552f1295f5.png
+2023-11-15 07:56:11,329 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_55f4f96e814874570043.png media/images/Bounding Box Debugger/Images_0_55f4f96e814874570043.png
+2023-11-15 07:56:11,329 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_d9869c0f233bfb898e24.png media/images/Bounding Box Debugger/Images_0_d9869c0f233bfb898e24.png
+2023-11-15 07:56:11,329 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_f5ba990fd4539d1c718c.png media/images/Bounding Box Debugger/Images_0_f5ba990fd4539d1c718c.png
+2023-11-15 07:56:11,329 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_1282f7104b254e38c0cf.png media/images/Bounding Box Debugger/Images_0_1282f7104b254e38c0cf.png
+2023-11-15 07:56:11,329 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_f88d545acebc675fbb20.png media/images/Bounding Box Debugger/Images_0_f88d545acebc675fbb20.png
+2023-11-15 07:56:11,329 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_809d23ef1ee1c697c5fa.png media/images/Bounding Box Debugger/Images_0_809d23ef1ee1c697c5fa.png
+2023-11-15 07:56:11,329 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_a0cd0e4d9b3208b0fe2a.png media/images/Bounding Box Debugger/Images_0_a0cd0e4d9b3208b0fe2a.png
+2023-11-15 07:56:11,330 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_a64ea17c1868bcd40a42.png media/images/Bounding Box Debugger/Images_0_a64ea17c1868bcd40a42.png
+2023-11-15 07:56:11,330 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_265f0af964a292a8666c.png media/images/Bounding Box Debugger/Images_0_265f0af964a292a8666c.png
+2023-11-15 07:56:11,330 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_9d98d82ab9e6e63044d4.png media/images/Bounding Box Debugger/Images_0_9d98d82ab9e6e63044d4.png
+2023-11-15 07:56:11,330 INFO    SenderThread:11421 [dir_watcher.py:finish():402] scan save: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/media/images/Bounding Box Debugger/Images_0_20ad44764c69fffb8631.png media/images/Bounding Box Debugger/Images_0_20ad44764c69fffb8631.png
+2023-11-15 07:56:11,330 INFO    SenderThread:11421 [sender.py:transition_state():613] send defer: 10
+2023-11-15 07:56:11,330 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 07:56:11,330 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:11,331 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 10
+2023-11-15 07:56:11,331 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:11,331 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-11-15 07:56:11,331 INFO    SenderThread:11421 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-15 07:56:11,496 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 07:56:11,497 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 07:56:12,231 INFO    wandb-upload_7:11421 [upload_job.py:push():131] Uploaded file /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/requirements.txt
+2023-11-15 07:56:12,233 INFO    wandb-upload_30:11421 [upload_job.py:push():131] Uploaded file /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/output.log
+2023-11-15 07:56:12,235 INFO    wandb-upload_1:11421 [upload_job.py:push():131] Uploaded file /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/config.yaml
+2023-11-15 07:56:12,236 INFO    wandb-upload_8:11421 [upload_job.py:push():131] Uploaded file /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/files/wandb-summary.json
+2023-11-15 07:56:12,437 INFO    Thread-11 (_thread_body):11421 [sender.py:transition_state():613] send defer: 11
+2023-11-15 07:56:12,438 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:12,438 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 11
+2023-11-15 07:56:12,439 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:12,439 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-11-15 07:56:12,439 INFO    SenderThread:11421 [file_pusher.py:join():181] waiting for file pusher
+2023-11-15 07:56:12,439 INFO    SenderThread:11421 [sender.py:transition_state():613] send defer: 12
+2023-11-15 07:56:12,439 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:12,440 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 12
+2023-11-15 07:56:12,440 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:12,440 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-11-15 07:56:12,441 INFO    SenderThread:11421 [file_stream.py:finish():595] file stream finish called
+2023-11-15 07:56:12,497 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 07:56:14,175 INFO    SenderThread:11421 [file_stream.py:finish():599] file stream finish is done
+2023-11-15 07:56:14,175 INFO    SenderThread:11421 [sender.py:transition_state():613] send defer: 13
+2023-11-15 07:56:14,175 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 07:56:14,175 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:14,175 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 13
+2023-11-15 07:56:14,176 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:14,176 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-11-15 07:56:14,176 INFO    SenderThread:11421 [sender.py:transition_state():613] send defer: 14
+2023-11-15 07:56:14,176 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 07:56:14,176 INFO    HandlerThread:11421 [handler.py:handle_request_defer():172] handle defer: 14
+2023-11-15 07:56:14,176 DEBUG   SenderThread:11421 [sender.py:send():380] send: final
+2023-11-15 07:56:14,176 DEBUG   SenderThread:11421 [sender.py:send():380] send: footer
+2023-11-15 07:56:14,176 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: defer
+2023-11-15 07:56:14,176 INFO    SenderThread:11421 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-11-15 07:56:14,177 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 07:56:14,177 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 07:56:14,178 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:56:14,179 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: server_info
+2023-11-15 07:56:14,179 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: server_info
+2023-11-15 07:56:14,223 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: get_summary
+2023-11-15 07:56:14,223 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: sampled_history
+2023-11-15 07:56:14,224 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: job_info
+2023-11-15 07:56:14,585 DEBUG   SenderThread:11421 [sender.py:send_request():407] send_request: job_info
+2023-11-15 07:56:14,587 DEBUG   HandlerThread:11421 [handler.py:handle_request():146] handle_request: shutdown
+2023-11-15 07:56:14,588 INFO    HandlerThread:11421 [handler.py:finish():866] shutting down handler
+2023-11-15 07:56:15,225 INFO    WriterThread:11421 [datastore.py:close():294] close: /home/mash/v7_new/yolov7/wandb/run-20231115_075124-2lm9ttr2/run-2lm9ttr2.wandb
+2023-11-15 07:56:15,586 INFO    SenderThread:11421 [sender.py:finish():1536] shutting down sender
+2023-11-15 07:56:15,587 INFO    SenderThread:11421 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-15 07:56:15,587 INFO    SenderThread:11421 [file_pusher.py:join():181] waiting for file pusher

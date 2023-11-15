@@ -1,0 +1,170 @@
+{
+    "os": "Linux-6.2.0-36-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2023-11-14T19:04:45.396588",
+    "startedAt": "2023-11-14T19:04:43.694465",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--epochs",
+        "1",
+        "--workers",
+        "4",
+        "--device",
+        "0",
+        "--batch-size",
+        "8",
+        "--data",
+        "data/custom.yaml",
+        "--img",
+        "640",
+        "640",
+        "--cfg",
+        "cfg/training/yolov7.yaml",
+        "--weights",
+        "yolov7.pt",
+        "--name",
+        "yolov7-custom",
+        "--hyp",
+        "data/hyp.scratch.custom.yaml"
+    ],
+    "state": "running",
+    "program": "/home/mash/v7_new/yolov7/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/WongKinYiu/yolov7.git",
+        "commit": "a207844b1ce82d204ab36d87d496728d3d2348e7"
+    },
+    "email": "mashruk.jahangir@trurecognition.io",
+    "root": "/home/mash/v7_new/yolov7",
+    "host": "tru-mash",
+    "username": "mash",
+    "executable": "/home/mash/yolov7/yolov7/venv/bin/python",
+    "cpu_count": 14,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 1971.9235500000002,
+        "min": 400.0,
+        "max": 4180.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2499.764,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 399.873,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 416.017,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 400.61,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 400.129,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2704.269,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 911.326,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2174.883,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1869.44,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 651.951,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 1173.05,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 401.016,
+            "min": 400.0,
+            "max": 3500.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 937.3305015563965,
+            "used": 604.71923828125
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 31.027263641357422
+    }
+}

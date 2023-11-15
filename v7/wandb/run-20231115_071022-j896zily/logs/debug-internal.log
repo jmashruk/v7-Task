@@ -1,0 +1,1137 @@
+2023-11-15 07:10:22,216 INFO    StreamThr :13295 [internal.py:wandb_internal():86] W&B internal server running at pid: 13295, started at: 2023-11-15 07:10:22.215743
+2023-11-15 07:10:22,218 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status
+2023-11-15 07:10:22,219 INFO    WriterThread:13295 [datastore.py:open_for_write():85] open: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/run-j896zily.wandb
+2023-11-15 07:10:22,219 DEBUG   SenderThread:13295 [sender.py:send():380] send: header
+2023-11-15 07:10:22,223 DEBUG   SenderThread:13295 [sender.py:send():380] send: run
+2023-11-15 07:10:22,227 INFO    SenderThread:13295 [sender.py:_maybe_setup_resume():759] checking resume status for None/YOLOR/j896zily
+2023-11-15 07:10:25,849 INFO    SenderThread:13295 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1096, in _validate_conn
+    conn.connect()
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/urllib3/connection.py", line 782, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 470, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 514, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/lib/python3.10/ssl.py", line 1071, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.10/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.wandb.ai'. (_ssl.c:1007)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.wandb.ai'. (_ssl.c:1007)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.wandb.ai'. (_ssl.c:1007)")))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/mash/yolov7/yolov7/venv/lib/python3.10/site-packages/requests/adapters.py", line 517, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.wandb.ai'. (_ssl.c:1007)")))
+2023-11-15 07:10:27,227 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:10:32,231 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:10:37,235 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:10:42,237 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:10:47,241 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:10:52,246 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:10:57,249 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 07:10:57,566 INFO    SenderThread:13295 [dir_watcher.py:__init__():211] watching files in: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files
+2023-11-15 07:10:57,566 INFO    SenderThread:13295 [sender.py:_start_run_threads():1124] run started: j896zily with start time 1699992622.215628
+2023-11-15 07:10:57,566 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:10:57,571 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: check_version
+2023-11-15 07:10:57,571 DEBUG   SenderThread:13295 [sender.py:send_request():407] send_request: check_version
+2023-11-15 07:10:57,883 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: run_start
+2023-11-15 07:10:57,892 DEBUG   HandlerThread:13295 [system_info.py:__init__():32] System info init
+2023-11-15 07:10:57,892 DEBUG   HandlerThread:13295 [system_info.py:__init__():47] System info init done
+2023-11-15 07:10:57,892 INFO    HandlerThread:13295 [system_monitor.py:start():194] Starting system monitor
+2023-11-15 07:10:57,892 INFO    SystemMonitor:13295 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-15 07:10:57,893 INFO    HandlerThread:13295 [system_monitor.py:probe():214] Collecting system info
+2023-11-15 07:10:57,893 INFO    SystemMonitor:13295 [interfaces.py:start():190] Started cpu monitoring
+2023-11-15 07:10:57,894 INFO    SystemMonitor:13295 [interfaces.py:start():190] Started disk monitoring
+2023-11-15 07:10:57,895 INFO    SystemMonitor:13295 [interfaces.py:start():190] Started gpu monitoring
+2023-11-15 07:10:57,895 INFO    SystemMonitor:13295 [interfaces.py:start():190] Started memory monitoring
+2023-11-15 07:10:57,896 INFO    SystemMonitor:13295 [interfaces.py:start():190] Started network monitoring
+2023-11-15 07:10:57,902 DEBUG   HandlerThread:13295 [system_info.py:probe():196] Probing system
+2023-11-15 07:10:57,903 DEBUG   HandlerThread:13295 [system_info.py:_probe_git():181] Probing git
+2023-11-15 07:10:57,908 DEBUG   HandlerThread:13295 [system_info.py:_probe_git():189] Probing git done
+2023-11-15 07:10:57,908 DEBUG   HandlerThread:13295 [system_info.py:probe():244] Probing system done
+2023-11-15 07:10:57,908 DEBUG   HandlerThread:13295 [system_monitor.py:probe():223] {'os': 'Linux-6.2.0-36-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2023-11-14T20:10:57.902382', 'startedAt': '2023-11-14T20:10:22.211961', 'docker': None, 'cuda': None, 'args': ('--epochs', '1', '--workers', '4', '--device', '0', '--batch-size', '8', '--data', 'data/custom.yaml', '--img', '640', '640', '--cfg', 'cfg/training/yolov7.yaml', '--weights', 'yolov7.pt', '--name', 'yolov7-custom', '--hyp', 'data/hyp.scratch.custom.yaml'), 'state': 'running', 'program': '/home/mash/v7_new/yolov7/train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/WongKinYiu/yolov7.git', 'commit': 'a207844b1ce82d204ab36d87d496728d3d2348e7'}, 'email': 'mashruk.jahangir@trurecognition.io', 'root': '/home/mash/v7_new/yolov7', 'host': 'tru-mash', 'username': 'mash', 'executable': '/home/mash/yolov7/yolov7/venv/bin/python', 'cpu_count': 14, 'cpu_count_logical': 20, 'cpu_freq': {'current': 2332.14325, 'min': 400.0, 'max': 4180.0}, 'cpu_freq_per_core': [{'current': 2709.09, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 2762.31, 'min': 400.0, 'max': 4700.0}, {'current': 2700.0, 'min': 400.0, 'max': 4700.0}, {'current': 1767.79, 'min': 400.0, 'max': 4700.0}, {'current': 2700.0, 'min': 400.0, 'max': 4700.0}, {'current': 1525.933, 'min': 400.0, 'max': 4600.0}, {'current': 2675.072, 'min': 400.0, 'max': 4600.0}, {'current': 1706.323, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 2509.433, 'min': 400.0, 'max': 4600.0}, {'current': 2793.974, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 607.878, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 433.751, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}], 'disk': {'/': {'total': 937.3305015563965, 'used': 605.0083312988281}}, 'gpu': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'memory_total': 6442450944}], 'memory': {'total': 31.027263641357422}}
+2023-11-15 07:10:57,908 INFO    HandlerThread:13295 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-15 07:10:57,908 INFO    HandlerThread:13295 [system_monitor.py:probe():227] Publishing system info
+2023-11-15 07:10:57,908 DEBUG   HandlerThread:13295 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-15 07:10:57,908 DEBUG   HandlerThread:13295 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-15 07:10:57,908 INFO    HandlerThread:13295 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-15 07:10:57,910 DEBUG   SenderThread:13295 [sender.py:send():380] send: files
+2023-11-15 07:10:57,911 INFO    SenderThread:13295 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2023-11-15 07:10:57,914 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:10:57,915 DEBUG   SenderThread:13295 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:10:57,957 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:10:58,404 DEBUG   SenderThread:13295 [sender.py:send():380] send: telemetry
+2023-11-15 07:10:58,404 DEBUG   SenderThread:13295 [sender.py:send():380] send: telemetry
+2023-11-15 07:10:58,404 DEBUG   SenderThread:13295 [sender.py:send():380] send: config
+2023-11-15 07:10:58,404 DEBUG   SenderThread:13295 [sender.py:send():380] send: config
+2023-11-15 07:10:58,566 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:10:58,566 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/requirements.txt
+2023-11-15 07:10:58,567 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/wandb-metadata.json
+2023-11-15 07:10:59,305 INFO    wandb-upload_0:13295 [upload_job.py:push():131] Uploaded file /tmp/tmpleow0bjawandb/ellltfxb-wandb-metadata.json
+2023-11-15 07:11:00,566 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:01,567 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:03,288 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:11:06,568 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:08,396 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:11:08,569 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:10,569 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:12,570 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:12,915 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:11:12,915 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:11:12,915 DEBUG   SenderThread:13295 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:11:13,472 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:11:14,571 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:16,571 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:18,572 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:18,768 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:11:20,572 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:22,573 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:23,842 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:11:24,575 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:27,918 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:11:27,920 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:11:27,924 DEBUG   SenderThread:13295 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:11:28,580 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:29,375 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:11:30,582 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/config.yaml
+2023-11-15 07:11:34,584 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:35,052 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:11:36,584 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:38,585 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:40,370 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:11:40,586 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:42,586 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:42,915 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:11:42,916 DEBUG   SenderThread:13295 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:11:42,917 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:11:44,588 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:45,401 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:11:46,588 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:48,589 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:50,205 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:50,206 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:50,206 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:50,206 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:50,206 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:50,206 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:50,206 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:50,590 INFO    Thread-12 :13295 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mash/v7_new/yolov7/wandb/run-20231115_071022-j896zily/files/output.log
+2023-11-15 07:11:50,894 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:11:52,206 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:52,207 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:52,207 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:52,207 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:52,207 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:52,207 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:52,207 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:54,207 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:54,208 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:54,208 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:54,208 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:54,209 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:54,209 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:54,209 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:55,896 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:11:56,209 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:56,210 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:56,210 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:56,210 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:56,210 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:56,210 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:56,210 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:57,896 DEBUG   SystemMonitor:13295 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-15 07:11:57,898 DEBUG   SenderThread:13295 [sender.py:send():380] send: stats
+2023-11-15 07:11:57,916 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:11:57,918 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:11:57,919 DEBUG   SenderThread:13295 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:11:58,224 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: GPU is lost
+2023-11-15 07:11:58,235 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: GPU is lost
+2023-11-15 07:11:58,246 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: GPU is lost
+2023-11-15 07:11:58,256 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: GPU is lost
+2023-11-15 07:11:58,267 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: GPU is lost
+2023-11-15 07:11:58,277 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: GPU is lost
+2023-11-15 07:11:58,288 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: GPU is lost
+2023-11-15 07:11:58,288 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:58,288 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:58,288 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:58,288 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:58,288 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:58,288 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:11:58,288 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:00,289 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:00,289 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:00,289 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:00,289 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:00,289 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:00,289 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:00,289 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:01,296 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:12:02,289 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:02,289 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:02,289 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:02,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:02,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:02,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:02,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:04,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:04,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:04,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:04,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:04,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:04,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:04,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:06,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:06,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:06,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:06,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:06,290 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:06,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:06,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:06,297 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:12:08,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:08,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:08,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:08,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:08,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:08,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:08,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:10,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:10,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:10,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:10,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:10,291 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:10,292 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:10,292 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:11,298 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:12:12,292 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:12,292 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:12,292 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:12,292 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:12,292 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:12,292 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:12,292 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:12,916 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:12:12,916 DEBUG   SenderThread:13295 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:12:12,957 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:12:14,292 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:14,292 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:14,293 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:14,293 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:14,293 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:14,293 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:14,293 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:16,293 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:16,293 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:16,293 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:16,293 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:16,293 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:16,293 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:16,293 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:16,320 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:12:18,293 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:18,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:18,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:18,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:18,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:18,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:18,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:20,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:20,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:20,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:20,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:20,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:20,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:20,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:21,321 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:12:22,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:22,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:22,294 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:22,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:22,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:22,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:22,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:24,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:24,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:24,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:24,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:24,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:24,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:24,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:26,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:26,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:26,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:26,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:26,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:26,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:26,295 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:26,322 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:12:27,898 DEBUG   SenderThread:13295 [sender.py:send():380] send: stats
+2023-11-15 07:12:27,916 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:12:27,916 DEBUG   SenderThread:13295 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:12:27,957 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:12:28,296 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-11-15 07:12:28,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:28,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:28,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:28,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:28,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:28,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:28,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:30,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:30,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:30,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:30,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:30,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:30,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:30,296 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:31,487 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:12:32,297 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:32,297 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:32,297 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:32,297 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:32,297 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:32,297 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:32,297 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:34,297 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:34,297 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:34,297 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:34,297 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:34,297 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:34,298 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:34,298 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:36,298 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:36,298 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:36,298 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:36,298 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:36,298 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:36,298 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:36,298 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:36,488 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:12:38,298 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:38,298 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:38,298 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:38,298 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:38,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:38,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:38,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:40,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:40,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:40,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:40,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:40,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:40,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:40,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:41,489 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:12:42,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:42,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:42,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:42,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:42,299 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:42,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:42,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:42,916 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:12:42,916 DEBUG   SenderThread:13295 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:12:42,957 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:12:44,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:44,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:44,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:44,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:44,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:44,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:44,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:46,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:46,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:46,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:46,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:46,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:46,300 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:46,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:46,529 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:12:48,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:48,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:48,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:48,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:48,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:48,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:48,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:50,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:50,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:50,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:50,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:50,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:50,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:50,301 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:51,529 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:12:52,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:52,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:52,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:52,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:52,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:52,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:52,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:54,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:54,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:54,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:54,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:54,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:54,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:54,302 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:56,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:56,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:56,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:56,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:56,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:56,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:56,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:56,530 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:12:57,899 DEBUG   SenderThread:13295 [sender.py:send():380] send: stats
+2023-11-15 07:12:57,916 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:12:57,917 DEBUG   SenderThread:13295 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:12:57,957 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:12:58,303 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-11-15 07:12:58,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:58,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:58,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:58,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:58,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:58,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:12:58,303 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:00,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:00,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:00,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:00,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:00,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:00,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:00,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:02,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:02,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:02,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:02,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:02,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:02,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:02,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:02,377 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:13:04,304 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:04,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:04,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:04,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:04,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:04,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:04,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:06,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:06,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:06,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:06,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:06,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:06,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:06,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:07,378 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:13:08,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:08,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:08,305 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:08,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:08,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:08,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:08,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:10,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:10,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:10,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:10,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:10,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:10,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:10,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:12,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:12,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:12,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:12,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:12,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:12,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:12,306 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:12,379 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:13:12,916 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:13:12,917 DEBUG   SenderThread:13295 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:13:12,957 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:13:14,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:14,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:14,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:14,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:14,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:14,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:14,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:16,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:16,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:16,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:16,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:16,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:16,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:16,307 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:18,225 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:13:18,308 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:18,308 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:18,308 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:18,308 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:18,308 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:18,308 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:18,308 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:20,308 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:20,308 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:20,308 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:20,308 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:20,308 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:20,308 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:20,309 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:22,309 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:22,309 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:22,309 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:22,309 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:22,309 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:22,309 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:22,309 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:23,226 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:13:24,309 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:24,309 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:24,310 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:24,310 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:24,310 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:24,310 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:24,310 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:26,310 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:26,310 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:26,310 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:26,310 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:26,310 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:26,321 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:26,321 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:27,899 DEBUG   SenderThread:13295 [sender.py:send():380] send: stats
+2023-11-15 07:13:27,916 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:13:27,917 DEBUG   SenderThread:13295 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:13:27,957 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:13:28,322 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-11-15 07:13:28,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:28,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:28,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:28,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:28,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:28,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:28,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:29,194 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:13:30,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:30,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:30,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:30,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:30,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:30,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:30,322 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:32,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:32,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:32,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:32,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:32,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:32,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:32,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:34,195 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:13:34,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:34,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:34,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:34,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:34,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:34,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:34,323 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:36,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:36,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:36,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:36,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:36,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:36,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:36,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:38,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:38,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:38,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:38,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:38,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:38,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:38,324 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:39,196 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:13:40,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:40,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:40,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:40,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:40,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:40,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:40,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:42,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:42,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:42,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:42,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:42,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:42,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:42,325 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:42,917 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 07:13:42,917 DEBUG   SenderThread:13295 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 07:13:42,957 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 07:13:44,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:44,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:44,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:44,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:44,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:44,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:44,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:44,330 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:13:46,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:46,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:46,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:46,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:46,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:46,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:46,326 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:48,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:48,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:48,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:48,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:48,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:48,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:48,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:49,331 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:13:50,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:50,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:50,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:50,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:50,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:50,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:50,327 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:52,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:52,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:52,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:52,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:52,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:52,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:52,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:54,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:54,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:54,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:54,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:54,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:54,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:54,328 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:54,332 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:13:56,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:56,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:56,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:56,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:56,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:56,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:56,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:57,900 DEBUG   SenderThread:13295 [sender.py:send():380] send: stats
+2023-11-15 07:13:58,329 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-11-15 07:13:58,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:58,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:58,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:58,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:58,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:58,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:58,329 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:13:59,901 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:14:00,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:00,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:00,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:00,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:00,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:00,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:00,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:02,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:02,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:02,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:02,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:02,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:02,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:02,330 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:04,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:04,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:04,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:04,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:04,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:04,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:04,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:04,901 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:14:06,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:06,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:06,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:06,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:06,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:06,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:06,331 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:08,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:08,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:08,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:08,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:08,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:08,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:08,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:09,903 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:14:10,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:10,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:10,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:10,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:10,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:10,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:10,332 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:12,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:12,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:12,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:12,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:12,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:12,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:12,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:14,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:14,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:14,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:14,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:14,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:14,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:14,333 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:14,904 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:14:16,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:16,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:16,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:16,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:16,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:16,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:16,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:18,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:18,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:18,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:18,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:18,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:18,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:18,334 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:19,905 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:14:20,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:20,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:20,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:20,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:20,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:20,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:20,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:22,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:22,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:22,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:22,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:22,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:22,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:22,335 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:24,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:24,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:24,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:24,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:24,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:24,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:24,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:24,906 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:14:26,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:26,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:26,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:26,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:26,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:26,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:26,336 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:27,900 DEBUG   SenderThread:13295 [sender.py:send():380] send: stats
+2023-11-15 07:14:28,337 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-11-15 07:14:28,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:28,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:28,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:28,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:28,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:28,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:28,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:30,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:30,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:30,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:30,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:30,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:30,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:30,337 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:30,901 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:14:32,338 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:32,338 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:32,338 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:32,338 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:32,338 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:32,338 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:32,338 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:34,338 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:34,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:34,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:34,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:34,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:34,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:34,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:35,902 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:14:36,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:36,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:36,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:36,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:36,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:36,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:36,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:38,339 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:38,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:38,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:38,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:38,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:38,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:38,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:40,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:40,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:40,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:40,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:40,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:40,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:40,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:40,903 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:14:42,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:42,340 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:42,341 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:42,341 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:42,341 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:42,341 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:42,341 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:44,341 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:44,341 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:44,341 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:44,341 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:44,341 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:44,341 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:44,341 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:45,904 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:14:46,341 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:46,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:46,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:46,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:46,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:46,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:46,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:48,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:48,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:48,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:48,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:48,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:48,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:48,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:50,342 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:50,343 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:50,343 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:50,343 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:50,343 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:50,343 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:50,343 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:50,905 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:14:52,343 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:52,343 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:52,343 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:52,343 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:52,343 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:52,343 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:52,343 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:54,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:54,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:54,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:54,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:54,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:54,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:54,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:55,907 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:14:56,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:56,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:56,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:56,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:56,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:56,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:56,344 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:57,900 DEBUG   SenderThread:13295 [sender.py:send():380] send: stats
+2023-11-15 07:14:58,345 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-11-15 07:14:58,345 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:58,345 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:58,345 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:58,345 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:58,345 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:58,345 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:14:58,345 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:00,345 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:00,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:00,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:00,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:00,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:00,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:00,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:01,902 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:15:02,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:02,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:02,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:02,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:02,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:02,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:02,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:04,346 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:04,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:04,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:04,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:04,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:04,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:04,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:06,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:06,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:06,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:06,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:06,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:06,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:06,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:06,902 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:15:08,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:08,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:08,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:08,347 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:08,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:08,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:08,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:10,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:10,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:10,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:10,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:10,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:10,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:10,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:11,903 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:15:12,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:12,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:12,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:12,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:12,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:12,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:12,348 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:14,349 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:14,349 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:14,349 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:14,349 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:14,349 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:14,349 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:14,349 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:16,349 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:16,349 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:16,349 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:16,349 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:16,350 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:16,350 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:16,350 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:16,904 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:15:18,350 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:18,350 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:18,350 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:18,350 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:18,350 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:18,350 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:18,350 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:20,350 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:20,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:20,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:20,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:20,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:20,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:20,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:21,905 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:15:22,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:22,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:22,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:22,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:22,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:22,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:22,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:24,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:24,351 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:24,352 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:24,352 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:24,352 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:24,352 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:24,352 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:26,352 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:26,352 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:26,352 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:26,352 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:26,352 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:26,352 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:26,352 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:26,906 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:15:27,901 DEBUG   SenderThread:13295 [sender.py:send():380] send: stats
+2023-11-15 07:15:28,352 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-11-15 07:15:28,352 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:28,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:28,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:28,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:28,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:28,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:28,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:30,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:30,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:30,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:30,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:30,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:30,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:30,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:32,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:32,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:32,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:32,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:32,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:32,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:32,353 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:32,902 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:15:34,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:34,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:34,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:34,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:34,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:34,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:34,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:36,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:36,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:36,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:36,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:36,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:36,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:36,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:37,903 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:15:38,354 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:38,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:38,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:38,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:38,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:38,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:38,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:40,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:40,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:40,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:40,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:40,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:40,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:40,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:42,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:42,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:42,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:42,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:42,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:42,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:42,355 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:42,904 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:15:44,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:44,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:44,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:44,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:44,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:44,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:44,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:46,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:46,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:46,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:46,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:46,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:46,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:46,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:47,905 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:15:48,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:48,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:48,356 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:48,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:48,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:48,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:48,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:50,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:50,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:50,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:50,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:50,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:50,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:50,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:52,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:52,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:52,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:52,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:52,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:52,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:52,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:52,906 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:15:54,357 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:54,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:54,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:54,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:54,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:54,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:54,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:56,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:56,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:56,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:56,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:56,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:56,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:56,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:57,901 DEBUG   SenderThread:13295 [sender.py:send():380] send: stats
+2023-11-15 07:15:58,358 ERROR   gpu       :13295 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-11-15 07:15:58,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:58,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:58,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:58,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:58,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:58,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:58,358 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:15:58,902 DEBUG   HandlerThread:13295 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 07:16:00,359 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:16:00,359 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:16:00,359 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:16:00,359 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:16:00,359 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:16:00,359 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
+2023-11-15 07:16:00,359 ERROR   gpu       :13295 [interfaces.py:monitor():144] Failed to sample metric: GPU is lost
