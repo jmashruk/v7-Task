@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # yolov7-tasks
-=======
+
 # YOLOv7 Tasks
 #### TASK1
 - Dataset Cleaning and Formatting:
@@ -36,6 +35,7 @@ This is a two step process:
 Altered the __get_item__ function by adding cv2.imwrite statements in the dataloader to output our desired images. For the sake of simplicity, added an extra flag in the training script called --verbose <path_to_output_folder> for easy access to transformed images during training.
 
 Simply run the training script along with the verbose flag and it should output all the intermediary images during training:
+
 python train.py --workers 8 --device 0 --batch-size 32 --data data/custom.yaml --img 640 640 --cfg cfg/training/yolov7-custom.yaml --weights 'yolov7_training.pt' --name yolov7-custom --hyp data/hyp.scratch.custom.yaml --verbose <path_to_output_folder>
 
 #### KEY FINDINGS
