@@ -37,5 +37,5 @@ Simply run the training script along with the verbose flag and it should output 
 python train.py --workers 8 --device 0 --batch-size 32 --data data/custom.yaml --img 640 640 --cfg cfg/training/yolov7-custom.yaml --weights 'yolov7_training.pt' --name yolov7-custom --hyp data/hyp.scratch.custom.yaml --verbose <path_to_output_folder>
 
 #### KEY FINDINGS
-* could segmentation polygon coordinates and bbox coordinates can be used for training object detectors in Yolo
->>>>>>> f1d5be46fd06c0488efe5bfdc04e51b6d188324c
+* segmentation polygon coordinates and bbox coordinates can be used for training object detectors in Yolo
+
