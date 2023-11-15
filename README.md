@@ -1,5 +1,3 @@
-# yolov7-tasks
-
 # YOLOv7 Tasks
 #### TASK1
 - Dataset Cleaning and Formatting:
